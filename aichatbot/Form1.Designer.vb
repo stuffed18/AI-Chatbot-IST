@@ -26,6 +26,8 @@ Partial Class Form1
         Me.Button1 = New System.Windows.Forms.Button()
         Me.TextBoxInput = New System.Windows.Forms.TextBox()
         Me.LabelTitle = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.FlowSuggestions = New System.Windows.Forms.FlowLayoutPanel()
         Me.SuspendLayout()
         '
         'FlowLayoutPanel1
@@ -44,7 +46,7 @@ Partial Class Form1
         Me.Button1.BackColor = System.Drawing.Color.Lime
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(567, 463)
+        Me.Button1.Location = New System.Drawing.Point(567, 494)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(104, 38)
         Me.Button1.TabIndex = 1
@@ -54,7 +56,7 @@ Partial Class Form1
         'TextBoxInput
         '
         Me.TextBoxInput.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBoxInput.Location = New System.Drawing.Point(28, 463)
+        Me.TextBoxInput.Location = New System.Drawing.Point(28, 494)
         Me.TextBoxInput.Multiline = True
         Me.TextBoxInput.Name = "TextBoxInput"
         Me.TextBoxInput.Size = New System.Drawing.Size(520, 71)
@@ -70,11 +72,30 @@ Partial Class Form1
         Me.LabelTitle.TabIndex = 3
         Me.LabelTitle.Text = "VB.ai chatbot 👍"
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(15, 458)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(46, 20)
+        Me.Label1.TabIndex = 4
+        Me.Label1.Text = "Ask:"
+        '
+        'FlowSuggestions
+        '
+        Me.FlowSuggestions.Location = New System.Drawing.Point(62, 451)
+        Me.FlowSuggestions.Name = "FlowSuggestions"
+        Me.FlowSuggestions.Size = New System.Drawing.Size(726, 35)
+        Me.FlowSuggestions.TabIndex = 6
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 546)
+        Me.ClientSize = New System.Drawing.Size(800, 587)
+        Me.Controls.Add(Me.FlowSuggestions)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.LabelTitle)
         Me.Controls.Add(Me.TextBoxInput)
         Me.Controls.Add(Me.Button1)
@@ -90,4 +111,6 @@ Partial Class Form1
     Friend WithEvents Button1 As Button
     Friend WithEvents TextBoxInput As TextBox
     Friend WithEvents LabelTitle As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents FlowSuggestions As FlowLayoutPanel
 End Class

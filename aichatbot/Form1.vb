@@ -2,27 +2,63 @@
 
 Public Class Form1
     Dim Index As Integer = 0
+    Private Shared rand As New Random
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        If String.IsNullOrEmpty(TextBoxInput.Text) = False Then
-            SendMessage(True, TextBoxInput.Text)
-            TextBoxInput.Text = ""
-
-            Dim Answers = {"No.", "Sure buddy", "blud thought he was doing something with that", "Ok who asked", "Not my problem", "No one cares bro", "No thanks, I'm good.", "Maybe if you use 1% of your brain for once", "Beep boop im an AI chatbot ready at your service. Jsut kidding i dont care go die"}
-            Dim rnd = New Random()
-            SendMessage(False, Answers(rnd.Next(0, Answers.Count)))
-
-            If rnd.Next(10, 15) = 11 Then
-                SendImage()
-            End If
-        End If
+        RunSendMessages(TextBoxInput.Text)
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         TextBoxInput.MaxLength = 200
 
         SendMessage(False, "Hi, I'm VBot! What can i do for you on this fine 23 degree day")
+
+        FlowSuggestions.Controls.Clear()
+        AddSuggestion("How do buttons work?")
+        AddSuggestion("How do I make a form?")
+        AddSuggestion("What does the properties window do?")
     End Sub
 
+    Private Sub AddSuggestion(str)
+        Dim Suggestion As New Button
+        Suggestion.Text = str
+        Suggestion.AutoSize = True
+        AddHandler Suggestion.Click, AddressOf SuggestionClick
+        FlowSuggestions.Controls.Add(Suggestion)
+    End Sub
+
+    Private Sub SuggestionClick(sender As Object, e As EventArgs)
+        RunSendMessages(sender.Text)
+    End Sub
+    Private Sub RunSendMessages(Input)
+        If String.IsNullOrEmpty(Input) = False Then
+            SendMessage(True, Input)
+            TextBoxInput.Text = ""
+
+            Dim Answers = {"No.", "Sure buddy", "blud thought he was doing something with that", "Ok who asked", "Not my problem", "No one cares bro", "No thanks, I'm good.", "Maybe if you use 1% of your brain for once", "Beep boop im an AI chatbot ready at your service. Jsut kidding i dont care go die"}
+            SendMessage(False, Answers(rand.Next(0, Answers.Count)))
+
+            If rand.Next(10, 15) = 11 Then
+                SendImage()
+            End If
+
+            Dim QuestionSuggestions = {
+                "How do buttons work?",
+                "How do I make a form?",
+                "What does the properties window do?",
+                "How do I declare a variable?",
+                "How do I create a for loop?",
+                "How do I change the text of a Label?",
+                "How do I handle a button click event?",
+                "How do I check if a string contains another string?",
+                "How do I set the default startup form in a Windows Forms application?"
+            }
+
+            FlowSuggestions.Controls.Clear()
+            For i As Integer = 1 To rand.Next(2, 3)
+                AddSuggestion(QuestionSuggestions(rand.Next(0, QuestionSuggestions.Count)))
+            Next
+        End If
+    End Sub
     Private Sub SendImage()
         Dim NewImage As New PictureBox
         NewImage.Image = My.Resources.im_going_to_go_now__1_1
