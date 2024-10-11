@@ -13,6 +13,8 @@ Public Class Form1
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'FlowLayoutPanel1.VerticalScroll.Visible = True
         TextBoxInput.MaxLength = 200
+
+        SendMessage(False, "Hi, I'm VBot! What can i do for you on this fine 23 degree day")
     End Sub
 
     Private Sub SendMessage(UserSent As Boolean, Message As String)
@@ -23,14 +25,16 @@ Public Class Form1
         NewMessage.Text = Message
         NewMessage.Font = New Font(NewMessage.Font.FontFamily.ToString(), 10)
 
+        NewMessage.Padding = New Padding(NewMessage.Padding.Left + 3, NewMessage.Padding.Top + 8, NewMessage.Padding.Right + 3, NewMessage.Padding.Bottom + 8)
+
         If UserSent Then
             NewMessage.BackColor = Color.Lime
 
-            Dim LeftMargin = FlowLayoutPanel1.Width - NewMessage.PreferredWidth - NewMessage.Padding.Right - 10
+            Dim LeftMargin = FlowLayoutPanel1.Width - NewMessage.PreferredWidth - NewMessage.Margin.Right - 5 - NewMessage.Padding.Left - NewMessage.Padding.Right
             If LeftMargin > 0 Then
-                NewMessage.Margin = New Padding(LeftMargin, NewMessage.Padding.Top + 5, NewMessage.Padding.Right + 5, NewMessage.Padding.Bottom + 5)
+                NewMessage.Margin = New Padding(LeftMargin, NewMessage.Margin.Top + 5, NewMessage.Margin.Right + 5, NewMessage.Margin.Bottom + 5)
             Else
-                NewMessage.Margin = New Padding(FlowLayoutPanel1.Width - 300 - NewMessage.Padding.Right - 10, NewMessage.Padding.Top + 5, NewMessage.Padding.Right + 5, NewMessage.Padding.Bottom + 5)
+                NewMessage.Margin = New Padding(FlowLayoutPanel1.Width - 300 - NewMessage.Margin.Right - 5 - NewMessage.Padding.Left - NewMessage.Padding.Right, NewMessage.Margin.Top + 5, NewMessage.Margin.Right + 5, NewMessage.Margin.Bottom + 5)
             End If
 
             NewMessage.Anchor = AnchorStyles.Right
@@ -38,7 +42,7 @@ Public Class Form1
             NewMessage.Dock = DockStyle.Right
         Else
             NewMessage.BackColor = Color.Pink
-            NewMessage.Margin = New Padding(NewMessage.Padding.Left + 5, NewMessage.Padding.Top + 5, NewMessage.Padding.Right, NewMessage.Padding.Bottom + 5)
+            NewMessage.Margin = New Padding(NewMessage.Margin.Left + 5, NewMessage.Margin.Top + 5, NewMessage.Margin.Right, NewMessage.Margin.Bottom + 5)
         End If
 
         NewMessage.AutoSize = True
