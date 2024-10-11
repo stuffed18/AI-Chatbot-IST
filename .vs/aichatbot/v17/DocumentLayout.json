@@ -18,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -27,6 +27,10 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{2d7728c2-de0a-45b5-99aa-89b609dfde73}"
             },
             {
               "$type": "Bookmark",
@@ -68,7 +72,7 @@
               "RelativeDocumentMoniker": "aichatbot\\Form1.vb",
               "ToolTip": "C:\\Benson\\School\\Year 10 IST\\Submission VB Programs\\AI-Chatbot-IST\\aichatbot\\Form1.vb",
               "RelativeToolTip": "aichatbot\\Form1.vb",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAABaAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2024-10-11T04:50:57.645Z",
               "EditorCaption": ""
