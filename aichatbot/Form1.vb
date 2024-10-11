@@ -80,7 +80,7 @@ Public Class Form1
         NewMessage.Padding = New Padding(NewMessage.Padding.Left + 3, NewMessage.Padding.Top + 8, NewMessage.Padding.Right + 3, NewMessage.Padding.Bottom + 8)
 
         If UserSent Then
-            NewMessage.BackColor = Color.Lime
+            NewMessage.BackColor = ColorTranslator.FromHtml("#CAF7E2")
 
             Dim LeftMargin = FlowLayoutPanel1.Width - NewMessage.PreferredWidth - NewMessage.Margin.Right - 5 - NewMessage.Padding.Left - NewMessage.Padding.Right
             If LeftMargin > 0 Then
@@ -93,7 +93,7 @@ Public Class Form1
             NewMessage.TextAlign = ContentAlignment.MiddleRight
             NewMessage.Dock = DockStyle.Right
         Else
-            NewMessage.BackColor = Color.Pink
+            NewMessage.BackColor = ColorTranslator.FromHtml("#F87575")
             NewMessage.Margin = New Padding(NewMessage.Margin.Left + 5, NewMessage.Margin.Top + 5, NewMessage.Margin.Right, NewMessage.Margin.Bottom + 5)
         End If
 
