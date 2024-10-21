@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "C:\\Benson\\School\\Year 10 IST\\Submission VB Programs\\AI-Chatbot-IST\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6F9056A7-4C3B-4DA6-9E83-9F8AFEAF846A}|aichatbot\\aichatbot.vbproj|C:\\Benson\\School\\Year 10 IST\\Submission VB Programs\\AI-Chatbot-IST\\aichatbot\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "AbsoluteMoniker": "D:0:0:{6F9056A7-4C3B-4DA6-9E83-9F8AFEAF846A}|aichatbot\\aichatbot.vbproj|c:\\benson\\school\\year 10 ist\\submission vb programs\\ai-chatbot-ist\\aichatbot\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{6F9056A7-4C3B-4DA6-9E83-9F8AFEAF846A}|aichatbot\\aichatbot.vbproj|solutionrelative:aichatbot\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6F9056A7-4C3B-4DA6-9E83-9F8AFEAF846A}|aichatbot\\aichatbot.vbproj|c:\\benson\\school\\year 10 ist\\submission vb programs\\ai-chatbot-ist\\aichatbot\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{6F9056A7-4C3B-4DA6-9E83-9F8AFEAF846A}|aichatbot\\aichatbot.vbproj|C:\\Benson\\School\\Year 10 IST\\Submission VB Programs\\AI-Chatbot-IST\\aichatbot\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{6F9056A7-4C3B-4DA6-9E83-9F8AFEAF846A}|aichatbot\\aichatbot.vbproj|solutionrelative:aichatbot\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     }
   ],
@@ -18,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,6 +54,18 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.vb [Design]",
+              "DocumentMoniker": "C:\\Benson\\School\\Year 10 IST\\Submission VB Programs\\AI-Chatbot-IST\\aichatbot\\Form1.vb",
+              "RelativeDocumentMoniker": "aichatbot\\Form1.vb",
+              "ToolTip": "C:\\Benson\\School\\Year 10 IST\\Submission VB Programs\\AI-Chatbot-IST\\aichatbot\\Form1.vb [Design]",
+              "RelativeToolTip": "aichatbot\\Form1.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-10-04T01:23:25.156Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Form1.vb",
               "DocumentMoniker": "C:\\Benson\\School\\Year 10 IST\\Submission VB Programs\\AI-Chatbot-IST\\aichatbot\\Form1.vb",
@@ -64,18 +76,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2024-10-11T12:13:29.217Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Form1.vb [Design]",
-              "DocumentMoniker": "C:\\Benson\\School\\Year 10 IST\\Submission VB Programs\\AI-Chatbot-IST\\aichatbot\\Form1.vb",
-              "RelativeDocumentMoniker": "aichatbot\\Form1.vb",
-              "ToolTip": "C:\\Benson\\School\\Year 10 IST\\Submission VB Programs\\AI-Chatbot-IST\\aichatbot\\Form1.vb [Design]",
-              "RelativeToolTip": "aichatbot\\Form1.vb [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-10-04T01:23:25.156Z",
-              "EditorCaption": " [Design]"
             }
           ]
         }
