@@ -115,4 +115,9 @@ Public Class Form1
     Private Sub Button1_MouseExit(sender As Object, e As EventArgs) Handles Button1.MouseLeave
         sender.BackgroundImage = My.Resources.ResourceManager.GetObject("send-icon")
     End Sub
+
+    Private Sub ButtonHome_Click(sender As Object, e As EventArgs) Handles ButtonHome.Click
+        FormHome.Show()
+        Me.Hide()
+    End Sub
 End Class

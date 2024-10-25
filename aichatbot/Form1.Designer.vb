@@ -50,10 +50,11 @@ Partial Class Form1
         '
         Me.LabelTitle.AutoSize = True
         Me.LabelTitle.BackColor = System.Drawing.Color.FromArgb(CType(CType(23, Byte), Integer), CType(CType(126, Byte), Integer), CType(CType(137, Byte), Integer))
-        Me.LabelTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelTitle.ForeColor = System.Drawing.Color.Black
         Me.LabelTitle.Location = New System.Drawing.Point(21, 22)
         Me.LabelTitle.Name = "LabelTitle"
-        Me.LabelTitle.Size = New System.Drawing.Size(263, 39)
+        Me.LabelTitle.Size = New System.Drawing.Size(278, 39)
         Me.LabelTitle.TabIndex = 3
         Me.LabelTitle.Text = "VB.ai chatbot 👍"
         '
@@ -62,6 +63,7 @@ Partial Class Form1
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(23, Byte), Integer), CType(CType(126, Byte), Integer), CType(CType(137, Byte), Integer))
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(188, Byte), Integer), CType(CType(210, Byte), Integer), CType(CType(238, Byte), Integer))
         Me.Label1.Location = New System.Drawing.Point(3, 24)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(46, 20)
