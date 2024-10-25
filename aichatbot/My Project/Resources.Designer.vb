@@ -63,6 +63,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property Copy_of_vbnet_ai_menu_page() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Copy of vbnet ai menu page", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property house_solid() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("house-solid", resourceCulture)
@@ -103,9 +113,29 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property img_2024_10_26_09_14_18_cleanup() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("img-2024-10-26-09-14-18_cleanup", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property paper_plane_solid() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("paper-plane-solid", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property Screenshot_2024_10_26_at_09_50_12_Font_Awesome() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Screenshot 2024-10-26 at 09-50-12 Font Awesome", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

@@ -150,5 +150,14 @@
   <ItemGroup>
     <None Include="Resources\send-icon-click.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img-2024-10-26-09-14-18_cleanup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Copy of vbnet ai menu page.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2024-10-26 at 09-50-12 Font Awesome.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
