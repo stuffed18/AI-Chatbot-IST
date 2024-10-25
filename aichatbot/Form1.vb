@@ -4,7 +4,9 @@ Public Class Form1
     Dim Index As Integer = 0
     Private Shared rand As New Random
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        sender.BackgroundImage = My.Resources.ResourceManager.GetObject("send-icon-click")
         RunSendMessages(TextBoxInput.Text)
+        sender.BackgroundImage = My.Resources.ResourceManager.GetObject("send-icon")
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -83,11 +85,11 @@ Public Class Form1
         If UserSent Then
             NewMessage.BackColor = ColorTranslator.FromHtml("#BCD2EE")
 
-            Dim LeftMargin = FlowLayoutPanel1.Width - NewMessage.PreferredWidth - NewMessage.Margin.Right - 5 - NewMessage.Padding.Left - NewMessage.Padding.Right
+            Dim LeftMargin = FlowLayoutPanel1.Width - NewMessage.PreferredWidth - NewMessage.Margin.Right - 10 - NewMessage.Padding.Left - NewMessage.Padding.Right
             If LeftMargin > 0 Then
-                NewMessage.Margin = New Padding(LeftMargin, NewMessage.Margin.Top + 5, NewMessage.Margin.Right + 5, NewMessage.Margin.Bottom + 5)
+                NewMessage.Margin = New Padding(LeftMargin, NewMessage.Margin.Top + 5, 0, NewMessage.Margin.Bottom + 5)
             Else
-                NewMessage.Margin = New Padding(FlowLayoutPanel1.Width - 300 - NewMessage.Margin.Right - 5 - NewMessage.Padding.Left - NewMessage.Padding.Right, NewMessage.Margin.Top + 5, NewMessage.Margin.Right + 5, NewMessage.Margin.Bottom + 5)
+                NewMessage.Margin = New Padding(FlowLayoutPanel1.Width - 300 - NewMessage.Margin.Right - 10 - NewMessage.Padding.Left - NewMessage.Padding.Right, NewMessage.Margin.Top + 5, 0, NewMessage.Margin.Bottom + 5)
             End If
 
             NewMessage.Anchor = AnchorStyles.Right
@@ -104,5 +106,13 @@ Public Class Form1
         FlowLayoutPanel1.Controls.Add(NewMessage)
         FlowLayoutPanel1.Controls.SetChildIndex(NewMessage, 0)
         FlowLayoutPanel1.ScrollControlIntoView(NewMessage)
+    End Sub
+
+    Private Sub Button1_MouseEnter(sender As Object, e As EventArgs) Handles Button1.MouseEnter
+        sender.BackgroundImage = My.Resources.ResourceManager.GetObject("send-icon-hover")
+    End Sub
+
+    Private Sub Button1_MouseExit(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+        sender.BackgroundImage = My.Resources.ResourceManager.GetObject("send-icon")
     End Sub
 End Class

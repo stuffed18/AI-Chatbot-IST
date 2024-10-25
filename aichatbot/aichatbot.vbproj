@@ -119,9 +119,26 @@
     </None>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\house-solid.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\im_going_to_go_now %281%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paper-plane-solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\send-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\house-solid %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\send-icon-hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\send-icon-click.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
