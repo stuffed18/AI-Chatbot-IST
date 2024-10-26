@@ -1,8 +1,11 @@
 ﻿Imports System.Drawing.Imaging
+Imports System.Speech.Synthesis
 
 Public Class Form1
     Dim Index As Integer = 0
     Private Shared rand As New Random
+
+    Dim synth As New SpeechSynthesizer
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         sender.BackgroundImage = My.Resources.ResourceManager.GetObject("send-icon-click")
         RunSendMessages(TextBoxInput.Text)
@@ -71,6 +74,7 @@ Public Class Form1
         FlowLayoutPanel1.Controls.Add(NewImage)
         FlowLayoutPanel1.Controls.SetChildIndex(NewImage, 0)
         FlowLayoutPanel1.ScrollControlIntoView(NewImage)
+        synth.SpeakAsync("I'm going to go now")
     End Sub
     Private Sub SendMessage(UserSent As Boolean, Message As String)
         Dim NewMessage As New Label
@@ -106,6 +110,11 @@ Public Class Form1
         FlowLayoutPanel1.Controls.Add(NewMessage)
         FlowLayoutPanel1.Controls.SetChildIndex(NewMessage, 0)
         FlowLayoutPanel1.ScrollControlIntoView(NewMessage)
+
+        If UserSent = False Then
+            synth.SpeakAsyncCancelAll()
+            synth.SpeakAsync(Message)
+        End If
     End Sub
 
     Private Sub Button1_MouseEnter(sender As Object, e As EventArgs) Handles Button1.MouseEnter
@@ -119,5 +128,10 @@ Public Class Form1
     Private Sub ButtonHome_Click(sender As Object, e As EventArgs) Handles ButtonHome.Click
         FormHome.Show()
         Me.Hide()
+    End Sub
+
+    Protected Overrides Sub OnFormClosing(e As FormClosingEventArgs)
+        synth.Dispose()
+        MyBase.OnFormClosing(e)
     End Sub
 End Class
