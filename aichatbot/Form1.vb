@@ -44,8 +44,8 @@ Public Class Form1
             SendMessage(True, Input)
             TextBoxInput.Text = ""
 
-            Dim Answers = {"No.", "Sure buddy", "blud thought he was doing something With that", "Ok who asked", "Not my problem", "No one cares bro", "No thanks, I'm good.", "Maybe if you use 1% of your brain for once", "Beep boop im an AI chatbot ready at your service. Jsut kidding i dont care go die"}
-            SendMessage(False, Answers(rand.Next(0, Answers.Count)))
+            'Dim Answers = {"No.", "Sure buddy", "blud thought he was doing something With that", "Ok who asked", "Not my problem", "No one cares bro", "No thanks, I'm good.", "Maybe if you use 1% of your brain for once", "Beep boop im an AI chatbot ready at your service. Jsut kidding i dont care go die"}
+            SendMessage(False, DecideChatbotAnswer(Input))
 
             If rand.Next(10, 15) = 11 Then
                 SendImage()
@@ -104,7 +104,7 @@ Public Class Form1
             NewMessage.TextAlign = ContentAlignment.MiddleRight
             NewMessage.Dock = DockStyle.Right
         Else
-            NewMessage.BackColor = ColorTranslator.FromHtml("#D90368")
+            NewMessage.BackColor = ColorTranslator.FromHtml("#fa52bf")
             NewMessage.Margin = New Padding(NewMessage.Margin.Left + 5, NewMessage.Margin.Top + 5, NewMessage.Margin.Right, NewMessage.Margin.Bottom + 5)
         End If
 
@@ -159,4 +159,59 @@ Public Class Form1
             TextBoxInput.Text = ""
         End If
     End Sub
+
+    Private Function DecideChatbotAnswer(UserInput_)
+        Dim Ans1 = {"Venus is the only planet to spin clockwise",
+                    "Bananas are berries, but strawberries aren’t!",
+                    "The longest place name in the world is the name of a village in Wales: Llanfair­pwllgwyngyll­gogery­chwyrn­drobwll­llan­tysilio­gogo­goch. Try fitting that on a postcard!",
+                    "Believe it or not, the unicorn is Scotland’s national animal. They’ve been associated with Scotland for centuries"}
+        Dim Ans2 = {"Sean: I’m so sorry, my dog ate my homework. \n Teacher: Your dog ate your coding assignment? \n Sean: It took him a couple bytes",
+                    "Why do programmers prefer dark mode? \n Because light attracts bugs.",
+                    "How many programmers does it take to change a light bulb? \n None, that's a hardware problem."}
+        Dim Ans3 = {"In VB.NET, you can declare a variable using the Dim keyword. For example: \n Dim myNumber As Integer"}
+        Dim Ans4 = {"You can handle a button click event by double clicking the button in the designer. This will automatically add an event handler that looks something like this: \n Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click \n MessageBox.Show(""Button Clicked!"")"}
+        Dim Ans5 = {"You can use the Contains method: \n Dim str As String = ""Hello World"" \n If str.Contains(""World"") Then \n     Console.WriteLine(""String found!"") \n End If"}
+
+        Dim UserInput As String = UserInput_.ToLower()
+        If Multicontains(UserInput, "fact,funfact") Then
+            Return RandomItemFrom(Ans1)
+        ElseIf Multicontains(UserInput, "joke,funny") Then
+            Return RandomItemFrom(Ans2)
+        ElseIf Multicontains(UserInput, "variable", "declare,make,create") Then
+            Return RandomItemFrom(Ans3)
+        ElseIf Multicontains(UserInput, "button", "click,tap,event") Then
+            Return RandomItemFrom(Ans4)
+        ElseIf Multicontains(UserInput, "string", "contains,has,contain", "check,whether,if,when") Then
+            Return RandomItemFrom(Ans5)
+        End If
+
+        Return "Sorry, I don't understand."
+    End Function
+
+    Private Function Multicontains(Text As String, ByVal ParamArray words As String())
+        For Each Word In words
+            Dim Subwords As String() = Split(Word, ",")
+            Dim Valid As Boolean = False
+            For Each SWord In Subwords
+                If Text.Contains(SWord) Then
+                    Valid = True
+                End If
+            Next
+            If Valid = False Then
+                Return False
+            End If
+        Next
+        Return True
+    End Function
+
+    Private Function RandomItemFrom(List)
+        Return SplitNewLines(List(rand.Next(0, List.Length)))
+    End Function
+
+    Private Function SplitNewLines(Text)
+        Dim NewText As String = Text
+        NewText = NewText.Replace(" \n ", vbNewLine)
+
+        Return NewText
+    End Function
 End Class
