@@ -28,6 +28,7 @@ Partial Class FormHome
         Me.ButtonEval = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.ButtonExit = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -81,6 +82,16 @@ Partial Class FormHome
         '
         Me.Timer1.Interval = 10
         '
+        'ButtonExit
+        '
+        Me.ButtonExit.Font = New System.Drawing.Font("Microsoft YaHei", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonExit.Location = New System.Drawing.Point(798, 603)
+        Me.ButtonExit.Name = "ButtonExit"
+        Me.ButtonExit.Size = New System.Drawing.Size(146, 79)
+        Me.ButtonExit.TabIndex = 6
+        Me.ButtonExit.Text = "Exit"
+        Me.ButtonExit.UseVisualStyleBackColor = True
+        '
         'FormHome
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -89,6 +100,7 @@ Partial Class FormHome
         Me.BackgroundImage = Global.aichatbot.My.Resources.Resources.img_2024_10_26_09_14_18_cleanup
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(984, 711)
+        Me.Controls.Add(Me.ButtonExit)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.ButtonEval)
         Me.Controls.Add(Me.ButtonQB)
@@ -106,4 +118,5 @@ Partial Class FormHome
     Friend WithEvents ButtonEval As Button
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents ButtonExit As Button
 End Class

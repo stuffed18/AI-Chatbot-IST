@@ -25,4 +25,11 @@
             Timer1.Stop()
         End If
     End Sub
+
+    Private Sub ButtonExit_Click(sender As Object, e As EventArgs) Handles ButtonExit.Click
+        Dim Answer As DialogResult = MessageBox.Show("Are you sure you want to exit the program?", "VB.net AI asks:", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
+        If Answer = vbYes Then
+            Me.Close()
+        End If
+    End Sub
 End Class

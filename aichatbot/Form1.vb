@@ -146,4 +146,17 @@ Public Class Form1
             Return cp
         End Get
     End Property 'CreateParams
+
+    Private Sub TextBoxInput_KeyDown(sender As Object, e As KeyEventArgs) Handles TextBoxInput.KeyDown
+        If e.KeyCode = Keys.Return Then
+            RunSendMessages(TextBoxInput.Text)
+            TextBoxInput.Text = ""
+        End If
+    End Sub
+
+    Private Sub TextBoxInput_KeyUp(sender As Object, e As KeyEventArgs) Handles TextBoxInput.KeyUp
+        If e.KeyCode = Keys.Return Then
+            TextBoxInput.Text = ""
+        End If
+    End Sub
 End Class
