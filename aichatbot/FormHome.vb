@@ -1,6 +1,28 @@
 ﻿Public Class FormHome
+    Dim Ticks As Integer = 0
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Form1.Show()
         Me.Hide()
+    End Sub
+
+    Private Sub FormHome_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        My.Computer.Audio.Play(My.Resources.boot_up, AudioPlayMode.Background)
+        Ticks = 0
+        PictureBox1.Location = New System.Drawing.Point(PictureBox1.Location.X, PictureBox1.Location.Y - 200)
+        Button1.Location = New System.Drawing.Point(Button1.Location.X, Button1.Location.Y + 400)
+        ButtonQB.Location = New System.Drawing.Point(ButtonQB.Location.X - 400, ButtonQB.Location.Y)
+        ButtonEval.Location = New System.Drawing.Point(ButtonEval.Location.X + 400, ButtonEval.Location.Y)
+        Timer1.Start()
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        Ticks += 1
+        PictureBox1.Location = New System.Drawing.Point(PictureBox1.Location.X, PictureBox1.Location.Y + (2 - (Ticks / 100)))
+        Button1.Location = New System.Drawing.Point(Button1.Location.X, Button1.Location.Y - (4 - (Ticks / 50)))
+        ButtonQB.Location = New System.Drawing.Point(ButtonQB.Location.X + (4 - (Ticks / 50)), ButtonQB.Location.Y)
+        ButtonEval.Location = New System.Drawing.Point(ButtonEval.Location.X - (4 - (Ticks / 50)), ButtonEval.Location.Y)
+        If Ticks = 200 Then
+            Timer1.Stop()
+        End If
     End Sub
 End Class

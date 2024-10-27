@@ -205,5 +205,8 @@
   <ItemGroup>
     <None Include="Resources\Copy of vbnet ai menu page1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boot-up.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

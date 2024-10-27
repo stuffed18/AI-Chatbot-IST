@@ -61,6 +61,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property boot_up() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("boot_up", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
         Friend ReadOnly Property Copy_of_Chat_with__29_7_x_21_cm_() As System.Drawing.Bitmap
