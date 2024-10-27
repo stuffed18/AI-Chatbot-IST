@@ -162,36 +162,38 @@ Public Class Form1
     End Sub
 
     Private Function DecideChatbotAnswer(UserInput_)
-        Dim Ans1 = {"Venus is the only planet to spin clockwise",
-                    "Bananas are berries, but strawberries aren’t!",
-                    "The longest place name in the world is the name of a village in Wales: Llanfair­pwllgwyngyll­gogery­chwyrn­drobwll­llan­tysilio­gogo­goch. Try fitting that on a postcard!",
-                    "Believe it or not, the unicorn is Scotland’s national animal. They’ve been associated with Scotland for centuries"}
-        Dim Ans2 = {"Sean: I’m so sorry, my dog ate my homework. \n Teacher: Your dog ate your coding assignment? \n Sean: It took him a couple bytes",
-                    "Why do programmers prefer dark mode? \n Because light attracts bugs.",
-                    "How many programmers does it take to change a light bulb? \n None, that's a hardware problem."}
-        Dim Ans3 = {"In VB.NET, you can declare a variable using the Dim keyword. For example: \n Dim myNumber As Integer"}
-        Dim Ans4 = {"You can handle a button click event by double clicking the button in the designer. This will automatically add an event handler that looks something like this: \n Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click \n MessageBox.Show(""Button Clicked!"")"}
-        Dim Ans5 = {"You can use the Contains method: \n Dim str As String = ""Hello World"" \n If str.Contains(""World"") Then \n     Console.WriteLine(""String found!"") \n End If"}
-
         Dim UserInput As String = UserInput_.ToLower()
-        If Multicontains(UserInput, "fact,funfact") Then
-            Return RandomItemFrom(Ans1)
-        ElseIf Multicontains(UserInput, "joke,funny") Then
-            Return RandomItemFrom(Ans2)
-        ElseIf Multicontains(UserInput, "variable", "declare,make,create") Then
-            Return RandomItemFrom(Ans3)
-        ElseIf Multicontains(UserInput, "button", "click,tap,event") Then
-            Return RandomItemFrom(Ans4)
+        If Multicontains(UserInput, "fact/funfact") Then
+            Return RandomItemFrom("Venus is the only planet to spin clockwise",
+                                  "Bananas are berries, but strawberries aren’t!",
+                                  "The longest place name in the world is the name of a village in Wales: Llanfair­pwllgwyngyll­gogery­chwyrn­drobwll­llan­tysilio­gogo­goch. Try fitting that on a postcard!",
+                                  "Believe it or not, the unicorn is Scotland’s national animal. They’ve been associated with Scotland for centuries")
+        ElseIf Multicontains(UserInput, "joke/funny") Then
+            Return RandomItemFrom("Sean: I’m so sorry, my dog ate my homework. \n Teacher: Your dog ate your coding assignment? \n Sean: It took him a couple bytes",
+                                  "Why do programmers prefer dark mode? \n Because light attracts bugs.""How many programmers does it take to change a light bulb? \n None, that's a hardware problem.")
+        ElseIf Multicontains(UserInput, "variable", "declare/make/create") Then
+            Return RandomItemFrom("In VB.NET, you can declare a variable using the Dim keyword. For example: \n Dim myNumber As Integer")
+        ElseIf Multicontains(UserInput, "button", "click/tap/event") Then
+            Return RandomItemFrom("You can handle a button click event by double clicking the button in the designer. This will automatically add an event handler that looks something like this: \n Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click \n MessageBox.Show(""Button Clicked!"")")
         ElseIf Multicontains(UserInput, "string", "contains,has,contain", "check,whether,if,when") Then
-            Return RandomItemFrom(Ans5)
+            Return RandomItemFrom("You can use the Contains method: \n Dim str As String = ""Hello World"" \n If str.Contains(""World"") Then \n     Console.WriteLine(""String found!"") \n End If")
+        ElseIf Multicontains(UserInput, "hello/hi/hallo/hey/good day/afternoon/morning/evening/bonjour/greet/howdy/long time/hiya/greeting/whats up/what's up") Then
+            Return RandomItemFrom("Hello! How can I assist you today?",
+                                  "What's up?",
+                                  "Hello! What would you like to know about VB.net?")
+        ElseIf Multicontains(UserInput, "bye/adios/see ya/see you/catch you/later") Then
+            Return RandomItemFrom("Thank you for using VB.net AI!",
+                                  "Goodbye. I hope I was of assisstance today!",
+                                  "Happy coding!")
         End If
 
-        Return "Sorry, I don't understand."
+        Return RandomItemFrom("Sorry, I don't understand.",
+                              "Sorry, could you rephrase that question?")
     End Function
 
     Private Function Multicontains(Text As String, ByVal ParamArray words As String())
         For Each Word In words
-            Dim Subwords As String() = Split(Word, ",")
+            Dim Subwords As String() = Split(Word, "/")
             Dim Valid As Boolean = False
             For Each SWord In Subwords
                 If Text.Contains(SWord) Then
@@ -205,7 +207,7 @@ Public Class Form1
         Return True
     End Function
 
-    Private Function RandomItemFrom(List)
+    Private Function RandomItemFrom(ByVal ParamArray List As String())
         Return SplitNewLines(List(rand.Next(0, List.Length)))
     End Function
 
