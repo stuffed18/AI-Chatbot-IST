@@ -188,10 +188,13 @@ Public Class Form1
             Return RandomItemFrom("Thank you for using VB.net AI!",
                                   "Goodbye. I hope I was of assisstance today!",
                                   "Happy coding!")
+        ElseIf Multicontains(UserInput, "meaning of life/meaning of the universe/meaning of it all/meaning of everything") Then
+            Return RandomItemFrom("I am an AI chatbot made to answer questions about VB.net, not the meaning of life. However, I hope you find some meaning in your coding journey!")
         End If
 
-        Return RandomItemFrom("Sorry, I don't understand.",
-                              "Sorry, could you rephrase that question?")
+        Return RandomItemFrom("Sorry, I'm not sure I understand.",
+                              "Sorry, could you rephrase that question?",
+                              "I don't know the answer to that. Try asking a question about Visual Basic or Windows Forms.")
     End Function
 
     Private Function Multicontains(Text As String, ByVal ParamArray words As String())
