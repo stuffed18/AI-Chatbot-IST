@@ -208,5 +208,17 @@
   <ItemGroup>
     <None Include="Resources\boot-up.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sendwhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\homepink.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\homewhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sendpink.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

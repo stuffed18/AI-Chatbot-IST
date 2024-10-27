@@ -7,9 +7,9 @@ Public Class Form1
 
     Dim synth As New SpeechSynthesizer
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        'sender.BackgroundImage = My.Resources.ResourceManager.GetObject("send-icon-click")
+        sender.BackgroundImage = My.Resources.sendwhite
         RunSendMessages(TextBoxInput.Text)
-        'sender.BackgroundImage = My.Resources.ResourceManager.GetObject("send-icon")
+        sender.BackgroundImage = My.Resources.Resources.Untitled_design_5_
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -122,16 +122,18 @@ Public Class Form1
         End If
     End Sub
 
-    'Private Sub Button1_MouseEnter(sender As Object, e As EventArgs) Handles Button1.MouseEnter
-    'sender.BackgroundImage = My.Resources.ResourceManager.GetObject("send-icon-hover")
-    'End Sub
+    Private Sub Button1_MouseEnter(sender As Object, e As EventArgs) Handles Button1.MouseEnter
+        sender.BackgroundImage = My.Resources.Resources.sendpink
+    End Sub
 
-    'Private Sub Button1_MouseExit(sender As Object, e As EventArgs) Handles Button1.MouseLeave
-    'sender.BackgroundImage = My.Resources.ResourceManager.GetObject("send-icon")
-    'End Sub
+    Private Sub Button1_MouseExit(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+        sender.BackgroundImage = My.Resources.Resources.Untitled_design_5_
+    End Sub
 
     Private Sub ButtonHome_Click(sender As Object, e As EventArgs) Handles ButtonHome.Click
+        sender.BackgroundImage = My.Resources.Resources.homewhite
         FormHome.Show()
+        sender.BackgroundImage = My.Resources.Resources.home_button_logo
         Me.Hide()
     End Sub
 
@@ -227,5 +229,21 @@ Public Class Form1
                                               "Alright, resetting. How can I assist you today?",
                                               "Let's have a new conversation. What can I help you with?"))
         End If
+    End Sub
+
+    Private Sub ButtonClearChat_MouseEnter(sender As Object, e As EventArgs) Handles ButtonClearChat.MouseEnter
+        sender.ForeColor = ColorTranslator.FromHtml("#fa52bf")
+    End Sub
+
+    Private Sub ButtonClearChat_MouseLeave(sender As Object, e As EventArgs) Handles ButtonClearChat.MouseLeave
+        sender.ForeColor = Color.White
+    End Sub
+
+    Private Sub ButtonHome_MouseEnter(sender As Object, e As EventArgs) Handles ButtonHome.MouseEnter
+        sender.BackgroundImage = My.Resources.Resources.homepink
+    End Sub
+
+    Private Sub ButtonHome_MouseLeave(sender As Object, e As EventArgs) Handles ButtonHome.MouseLeave
+        sender.BackgroundImage = My.Resources.Resources.home_button_logo
     End Sub
 End Class
