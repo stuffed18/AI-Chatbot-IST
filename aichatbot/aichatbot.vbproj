@@ -160,5 +160,14 @@
   <ItemGroup>
     <None Include="Resources\Screenshot 2024-10-26 at 09-50-12 Font Awesome.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reactos-boot-85864.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boot-up.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boot-up.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

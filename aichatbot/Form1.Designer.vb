@@ -25,14 +25,14 @@ Partial Class Form1
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ButtonHome = New System.Windows.Forms.Button()
-        Me.TextBoxInput = New System.Windows.Forms.TextBox()
         Me.FlowSuggestions = New System.Windows.Forms.FlowLayoutPanel()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.Panel2.SuspendLayout()
+        Me.TextBoxInput = New System.Windows.Forms.TextBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3.SuspendLayout()
+        Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'FlowLayoutPanel1
@@ -73,53 +73,12 @@ Partial Class Form1
         Me.ButtonHome.TabIndex = 4
         Me.ButtonHome.UseVisualStyleBackColor = False
         '
-        'TextBoxInput
-        '
-        Me.TextBoxInput.BackColor = System.Drawing.Color.FromArgb(CType(CType(188, Byte), Integer), CType(CType(210, Byte), Integer), CType(CType(238, Byte), Integer))
-        Me.TextBoxInput.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBoxInput.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBoxInput.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.TextBoxInput.Location = New System.Drawing.Point(18, 60)
-        Me.TextBoxInput.Multiline = True
-        Me.TextBoxInput.Name = "TextBoxInput"
-        Me.TextBoxInput.Size = New System.Drawing.Size(563, 53)
-        Me.TextBoxInput.TabIndex = 2
-        '
         'FlowSuggestions
         '
         Me.FlowSuggestions.Location = New System.Drawing.Point(50, 19)
         Me.FlowSuggestions.Name = "FlowSuggestions"
         Me.FlowSuggestions.Size = New System.Drawing.Size(700, 35)
         Me.FlowSuggestions.TabIndex = 6
-        '
-        'Panel2
-        '
-        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(23, Byte), Integer), CType(CType(126, Byte), Integer), CType(CType(137, Byte), Integer))
-        Me.Panel2.Controls.Add(Me.Label1)
-        Me.Panel2.Controls.Add(Me.FlowSuggestions)
-        Me.Panel2.Controls.Add(Me.Button1)
-        Me.Panel2.Controls.Add(Me.TextBoxInput)
-        Me.Panel2.Location = New System.Drawing.Point(197, 536)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(750, 160)
-        Me.Panel2.TabIndex = 0
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.Transparent
-        Me.Button1.BackgroundImage = Global.aichatbot.My.Resources.Resources.send_icon
-        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.Black
-        Me.Button1.Location = New System.Drawing.Point(597, 60)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(51, 53)
-        Me.Button1.TabIndex = 1
-        Me.Button1.UseVisualStyleBackColor = False
         '
         'Label2
         '
@@ -140,6 +99,47 @@ Partial Class Form1
         Me.Panel3.Size = New System.Drawing.Size(211, 100)
         Me.Panel3.TabIndex = 6
         '
+        'TextBoxInput
+        '
+        Me.TextBoxInput.BackColor = System.Drawing.Color.FromArgb(CType(CType(188, Byte), Integer), CType(CType(210, Byte), Integer), CType(CType(238, Byte), Integer))
+        Me.TextBoxInput.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBoxInput.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBoxInput.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.TextBoxInput.Location = New System.Drawing.Point(18, 60)
+        Me.TextBoxInput.Multiline = True
+        Me.TextBoxInput.Name = "TextBoxInput"
+        Me.TextBoxInput.Size = New System.Drawing.Size(563, 53)
+        Me.TextBoxInput.TabIndex = 2
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.Transparent
+        Me.Button1.BackgroundImage = Global.aichatbot.My.Resources.Resources.send_icon
+        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.Black
+        Me.Button1.Location = New System.Drawing.Point(597, 60)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(51, 53)
+        Me.Button1.TabIndex = 1
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(23, Byte), Integer), CType(CType(126, Byte), Integer), CType(CType(137, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.Label1)
+        Me.Panel2.Controls.Add(Me.FlowSuggestions)
+        Me.Panel2.Controls.Add(Me.Button1)
+        Me.Panel2.Controls.Add(Me.TextBoxInput)
+        Me.Panel2.Location = New System.Drawing.Point(197, 536)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(750, 160)
+        Me.Panel2.TabIndex = 0
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -155,21 +155,21 @@ Partial Class Form1
         Me.Name = "Form1"
         Me.ShowIcon = False
         Me.Text = "Form1"
-        Me.Panel2.ResumeLayout(False)
-        Me.Panel2.PerformLayout()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBoxInput As TextBox
-    Friend WithEvents Button1 As Button
     Friend WithEvents FlowSuggestions As FlowLayoutPanel
-    Friend WithEvents Panel2 As Panel
     Friend WithEvents ButtonHome As Button
     Friend WithEvents Label2 As Label
     Friend WithEvents Panel3 As Panel
+    Friend WithEvents TextBoxInput As TextBox
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Panel2 As Panel
 End Class

@@ -61,6 +61,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property boot_up() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("boot_up", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
         Friend ReadOnly Property Copy_of_vbnet_ai_menu_page() As System.Drawing.Bitmap
@@ -127,6 +136,16 @@ Namespace My.Resources
             Get
                 Dim obj As Object = ResourceManager.GetObject("paper-plane-solid", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property reactos_boot_85864() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("reactos_boot_85864", resourceCulture)
+                Return CType(obj,Byte())
             End Get
         End Property
         
