@@ -33,6 +33,7 @@ Partial Class Form1
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.ButtonClearChat = New System.Windows.Forms.Button()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -44,10 +45,10 @@ Partial Class Form1
         Me.FlowLayoutPanel1.AutoScroll = True
         Me.FlowLayoutPanel1.BackColor = System.Drawing.Color.Transparent
         Me.FlowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.BottomUp
-        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(247, -7)
-        Me.FlowLayoutPanel1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(185, -6)
+        Me.FlowLayoutPanel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(722, 486)
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(542, 395)
         Me.FlowLayoutPanel1.TabIndex = 0
         Me.FlowLayoutPanel1.WrapContents = False
         '
@@ -55,10 +56,9 @@ Partial Class Form1
         '
         Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(229, 500)
-        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(4)
+        Me.PictureBox2.Location = New System.Drawing.Point(172, 406)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(773, 142)
+        Me.PictureBox2.Size = New System.Drawing.Size(580, 115)
         Me.PictureBox2.TabIndex = 7
         Me.PictureBox2.TabStop = False
         '
@@ -66,10 +66,9 @@ Partial Class Form1
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.PictureBox1.Image = Global.aichatbot.My.Resources.Resources.Copy_of_Chat_with__29_7_x_21_cm__5_
-        Me.PictureBox1.Location = New System.Drawing.Point(256, 558)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4)
+        Me.PictureBox1.Location = New System.Drawing.Point(192, 453)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(707, 60)
+        Me.PictureBox1.Size = New System.Drawing.Size(530, 49)
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
@@ -82,10 +81,10 @@ Partial Class Form1
         Me.ButtonHome.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
         Me.ButtonHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.ButtonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonHome.Location = New System.Drawing.Point(11, 11)
-        Me.ButtonHome.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.ButtonHome.Location = New System.Drawing.Point(8, 9)
+        Me.ButtonHome.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.ButtonHome.Name = "ButtonHome"
-        Me.ButtonHome.Size = New System.Drawing.Size(57, 50)
+        Me.ButtonHome.Size = New System.Drawing.Size(43, 41)
         Me.ButtonHome.TabIndex = 4
         Me.ButtonHome.UseVisualStyleBackColor = False
         '
@@ -95,11 +94,11 @@ Partial Class Form1
         Me.TextBoxInput.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TextBoxInput.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBoxInput.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.TextBoxInput.Location = New System.Drawing.Point(280, 571)
-        Me.TextBoxInput.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TextBoxInput.Location = New System.Drawing.Point(210, 464)
+        Me.TextBoxInput.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TextBoxInput.Multiline = True
         Me.TextBoxInput.Name = "TextBoxInput"
-        Me.TextBoxInput.Size = New System.Drawing.Size(597, 26)
+        Me.TextBoxInput.Size = New System.Drawing.Size(448, 21)
         Me.TextBoxInput.TabIndex = 2
         '
         'Button1
@@ -113,40 +112,39 @@ Partial Class Form1
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.Black
-        Me.Button1.Location = New System.Drawing.Point(903, 567)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Button1.Location = New System.Drawing.Point(677, 461)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(47, 43)
+        Me.Button1.Size = New System.Drawing.Size(35, 35)
         Me.Button1.TabIndex = 1
         Me.Button1.UseVisualStyleBackColor = False
         '
         'FlowSuggestions
         '
         Me.FlowSuggestions.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(96, Byte), Integer))
-        Me.FlowSuggestions.Location = New System.Drawing.Point(252, 514)
-        Me.FlowSuggestions.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.FlowSuggestions.Location = New System.Drawing.Point(189, 418)
+        Me.FlowSuggestions.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.FlowSuggestions.Name = "FlowSuggestions"
-        Me.FlowSuggestions.Size = New System.Drawing.Size(700, 34)
+        Me.FlowSuggestions.Size = New System.Drawing.Size(525, 28)
         Me.FlowSuggestions.TabIndex = 6
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(96, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.ButtonClearChat)
         Me.Panel1.Controls.Add(Me.PictureBox3)
         Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Location = New System.Drawing.Point(-16, -6)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
+        Me.Panel1.Location = New System.Drawing.Point(-12, -5)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(231, 670)
+        Me.Panel1.Size = New System.Drawing.Size(173, 544)
         Me.Panel1.TabIndex = 8
         '
         'PictureBox3
         '
         Me.PictureBox3.Image = Global.aichatbot.My.Resources.Resources.Copy_of_vbnet_ai_menu_page1
-        Me.PictureBox3.Location = New System.Drawing.Point(31, 136)
-        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(4)
+        Me.PictureBox3.Location = New System.Drawing.Point(23, 110)
         Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(180, 49)
+        Me.PictureBox3.Size = New System.Drawing.Size(135, 40)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox3.TabIndex = 1
         Me.PictureBox3.TabStop = False
@@ -156,21 +154,35 @@ Partial Class Form1
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(238, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(20, 87)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(15, 71)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(130, 37)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Chat with"
         '
+        'ButtonClearChat
+        '
+        Me.ButtonClearChat.FlatAppearance.BorderSize = 0
+        Me.ButtonClearChat.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.ButtonClearChat.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.ButtonClearChat.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonClearChat.Font = New System.Drawing.Font("Segoe UI", 10.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonClearChat.ForeColor = System.Drawing.Color.White
+        Me.ButtonClearChat.Location = New System.Drawing.Point(42, 480)
+        Me.ButtonClearChat.Name = "ButtonClearChat"
+        Me.ButtonClearChat.Size = New System.Drawing.Size(97, 42)
+        Me.ButtonClearChat.TabIndex = 9
+        Me.ButtonClearChat.Text = "Clear Chat"
+        Me.ButtonClearChat.UseVisualStyleBackColor = True
+        '
         'Form1
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(113, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(164, Byte), Integer))
         Me.BackgroundImage = Global.aichatbot.My.Resources.Resources.Copy_of_Chat_with__29_7_x_21_cm_
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(1007, 661)
+        Me.ClientSize = New System.Drawing.Size(755, 537)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.TextBoxInput)
         Me.Controls.Add(Me.PictureBox1)
@@ -181,7 +193,7 @@ Partial Class Form1
         Me.Controls.Add(Me.Panel1)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
-        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.MaximizeBox = False
         Me.Name = "Form1"
         Me.ShowIcon = False
@@ -206,4 +218,5 @@ Partial Class Form1
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents ButtonClearChat As Button
 End Class

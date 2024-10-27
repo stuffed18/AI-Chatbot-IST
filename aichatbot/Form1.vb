@@ -15,7 +15,7 @@ Public Class Form1
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         TextBoxInput.MaxLength = 200
 
-        SendMessage(False, "Hi, I'm VBot! What can i do for you on this fine 23 degree day")
+        SendMessage(False, RandomItemFrom("Hi, I'm Kiren, your personal chatbot assistant. What would you like to know about VB.net Windows Forms?"))
 
         FlowSuggestions.Controls.Clear()
         AddSuggestion("How do buttons work?")
@@ -170,7 +170,8 @@ Public Class Form1
                                   "Believe it or not, the unicorn is Scotland’s national animal. They’ve been associated with Scotland for centuries")
         ElseIf Multicontains(UserInput, "joke/funny") Then
             Return RandomItemFrom("Sean: I’m so sorry, my dog ate my homework. \n Teacher: Your dog ate your coding assignment? \n Sean: It took him a couple bytes",
-                                  "Why do programmers prefer dark mode? \n Because light attracts bugs.""How many programmers does it take to change a light bulb? \n None, that's a hardware problem.")
+                                  "Why do programmers prefer dark mode? \n Because light attracts bugs.",
+                                  "How many programmers does it take to change a light bulb? \n None, that's a hardware problem.")
         ElseIf Multicontains(UserInput, "variable", "declare/make/create") Then
             Return RandomItemFrom("In VB.NET, you can declare a variable using the Dim keyword. For example: \n Dim myNumber As Integer")
         ElseIf Multicontains(UserInput, "button", "click/tap/event") Then
@@ -217,4 +218,14 @@ Public Class Form1
 
         Return NewText
     End Function
+
+    Private Sub ButtonClearChat_Click(sender As Object, e As EventArgs) Handles ButtonClearChat.Click
+        Dim Answer As DialogResult = MessageBox.Show("Are you sure you want to clear chat history?", "VB.net AI asks:", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
+        If Answer = vbYes Then
+            FlowLayoutPanel1.Controls.Clear()
+            SendMessage(False, RandomItemFrom("Hi, let's start over. What would you like to know about VB.net.",
+                                              "Alright, resetting. How can I assist you today?",
+                                              "Let's have a new conversation. What can I help you with?"))
+        End If
+    End Sub
 End Class
