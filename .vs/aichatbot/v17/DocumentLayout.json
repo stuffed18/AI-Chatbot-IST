@@ -1,0 +1,114 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\kiren\\source\\repos\\aichatbot\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6F9056A7-4C3B-4DA6-9E83-9F8AFEAF846A}|aichatbot\\aichatbot.vbproj|C:\\Users\\kiren\\source\\repos\\aichatbot\\aichatbot\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{6F9056A7-4C3B-4DA6-9E83-9F8AFEAF846A}|aichatbot\\aichatbot.vbproj|solutionrelative:aichatbot\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F9056A7-4C3B-4DA6-9E83-9F8AFEAF846A}|aichatbot\\aichatbot.vbproj|C:\\Users\\kiren\\source\\repos\\aichatbot\\aichatbot\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{6F9056A7-4C3B-4DA6-9E83-9F8AFEAF846A}|aichatbot\\aichatbot.vbproj|solutionrelative:aichatbot\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F9056A7-4C3B-4DA6-9E83-9F8AFEAF846A}|aichatbot\\aichatbot.vbproj|C:\\Users\\kiren\\source\\repos\\aichatbot\\aichatbot\\formhome.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{6F9056A7-4C3B-4DA6-9E83-9F8AFEAF846A}|aichatbot\\aichatbot.vbproj|solutionrelative:aichatbot\\formhome.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F9056A7-4C3B-4DA6-9E83-9F8AFEAF846A}|aichatbot\\aichatbot.vbproj|c:\\users\\kiren\\source\\repos\\aichatbot\\aichatbot\\formhome.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{6F9056A7-4C3B-4DA6-9E83-9F8AFEAF846A}|aichatbot\\aichatbot.vbproj|solutionrelative:aichatbot\\formhome.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e78e0cf7-2e4e-48a7-bf7f-a94d9330a3be}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.vb",
+              "DocumentMoniker": "C:\\Users\\kiren\\source\\repos\\aichatbot\\aichatbot\\Form1.vb",
+              "RelativeDocumentMoniker": "aichatbot\\Form1.vb",
+              "ToolTip": "C:\\Users\\kiren\\source\\repos\\aichatbot\\aichatbot\\Form1.vb",
+              "RelativeToolTip": "aichatbot\\Form1.vb",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-10-27T04:39:50.825Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\kiren\\source\\repos\\aichatbot\\aichatbot\\Form1.vb",
+              "RelativeDocumentMoniker": "aichatbot\\Form1.vb",
+              "ToolTip": "C:\\Users\\kiren\\source\\repos\\aichatbot\\aichatbot\\Form1.vb [Design]",
+              "RelativeToolTip": "aichatbot\\Form1.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-10-25T22:40:57.285Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FormHome.vb",
+              "DocumentMoniker": "C:\\Users\\kiren\\source\\repos\\aichatbot\\aichatbot\\FormHome.vb",
+              "RelativeDocumentMoniker": "aichatbot\\FormHome.vb",
+              "ToolTip": "C:\\Users\\kiren\\source\\repos\\aichatbot\\aichatbot\\FormHome.vb",
+              "RelativeToolTip": "aichatbot\\FormHome.vb",
+              "ViewState": "AQIAAAAAAAAAAAAAAAA8wAUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-10-25T22:46:04.723Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FormHome.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\kiren\\source\\repos\\aichatbot\\aichatbot\\FormHome.vb",
+              "RelativeDocumentMoniker": "aichatbot\\FormHome.vb",
+              "ToolTip": "C:\\Users\\kiren\\source\\repos\\aichatbot\\aichatbot\\FormHome.vb [Design]",
+              "RelativeToolTip": "aichatbot\\FormHome.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-10-25T22:41:16.775Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

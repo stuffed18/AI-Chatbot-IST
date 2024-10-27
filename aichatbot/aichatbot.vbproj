@@ -160,5 +160,50 @@
   <ItemGroup>
     <None Include="Resources\Screenshot 2024-10-26 at 09-50-12 Font Awesome.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Copy of Chat with %2829.7 x 21 cm%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Copy of Chat with %28754 x 476 px%29%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Copy of Chat with %2829.7 x 21 cm%29%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Copy of Chat with %2829.7 x 21 cm%29%282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Copy of Chat with %2829.7 x 21 cm%29%283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Copy of Chat with %2829.7 x 21 cm%29%284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Copy of Chat with %2829.7 x 21 cm%29%285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled design%285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled design%285%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Copy of Chat with %2829.7 x 21 cm%29%285%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Copy of Chat with %2829.7 x 21 cm%29%286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Copy of Chat with %2829.7 x 21 cm%29%287%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Copy of Chat with %2829.7 x 21 cm%29%288%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home button logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Copy of vbnet ai menu page1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

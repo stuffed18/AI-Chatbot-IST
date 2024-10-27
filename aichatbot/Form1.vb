@@ -21,6 +21,10 @@ Public Class Form1
         AddSuggestion("How do buttons work?")
         AddSuggestion("How do I make a form?")
         AddSuggestion("What does the properties window do?")
+
+        FlowSuggestions.BackColor = Color.FromArgb(4, 31, 96)
+        PictureBox1.BackColor = Color.FromArgb(4, 31, 96)
+
     End Sub
 
     Private Sub AddSuggestion(str)
@@ -40,7 +44,7 @@ Public Class Form1
             SendMessage(True, Input)
             TextBoxInput.Text = ""
 
-            Dim Answers = {"No.", "Sure buddy", "blud thought he was doing something with that", "Ok who asked", "Not my problem", "No one cares bro", "No thanks, I'm good.", "Maybe if you use 1% of your brain for once", "Beep boop im an AI chatbot ready at your service. Jsut kidding i dont care go die"}
+            Dim Answers = {"No.", "Sure buddy", "blud thought he was doing something With that", "Ok who asked", "Not my problem", "No one cares bro", "No thanks, I'm good.", "Maybe if you use 1% of your brain for once", "Beep boop im an AI chatbot ready at your service. Jsut kidding i dont care go die"}
             SendMessage(False, Answers(rand.Next(0, Answers.Count)))
 
             If rand.Next(10, 15) = 11 Then
@@ -133,5 +137,9 @@ Public Class Form1
     Protected Overrides Sub OnFormClosing(e As FormClosingEventArgs)
         synth.Dispose()
         MyBase.OnFormClosing(e)
+    End Sub
+
+    Private Sub FlowSuggestions_Paint(sender As Object, e As PaintEventArgs) Handles FlowSuggestions.Paint
+
     End Sub
 End Class
