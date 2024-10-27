@@ -63,7 +63,7 @@ Partial Class Form1
         '
         'PictureBox1
         '
-        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.PictureBox1.Image = Global.aichatbot.My.Resources.Resources.Copy_of_Chat_with__29_7_x_21_cm__5_
         Me.PictureBox1.Location = New System.Drawing.Point(192, 453)
         Me.PictureBox1.Name = "PictureBox1"
@@ -120,7 +120,7 @@ Partial Class Form1
         '
         'FlowSuggestions
         '
-        Me.FlowSuggestions.BackColor = System.Drawing.Color.Transparent
+        Me.FlowSuggestions.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.FlowSuggestions.Location = New System.Drawing.Point(189, 418)
         Me.FlowSuggestions.Margin = New System.Windows.Forms.Padding(2)
         Me.FlowSuggestions.Name = "FlowSuggestions"
@@ -162,7 +162,7 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(23, Byte), Integer), CType(CType(126, Byte), Integer), CType(CType(137, Byte), Integer))
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(113, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(164, Byte), Integer))
         Me.BackgroundImage = Global.aichatbot.My.Resources.Resources.Copy_of_Chat_with__29_7_x_21_cm_
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(755, 537)

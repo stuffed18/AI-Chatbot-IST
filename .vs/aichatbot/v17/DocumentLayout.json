@@ -1,22 +1,25 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\kiren\\source\\repos\\aichatbot\\",
+  "WorkspaceRootPath": "C:\\Benson\\School\\Year 10 IST\\Submission VB Programs\\AI-Chatbot-IST\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6F9056A7-4C3B-4DA6-9E83-9F8AFEAF846A}|aichatbot\\aichatbot.vbproj|C:\\Users\\kiren\\source\\repos\\aichatbot\\aichatbot\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "AbsoluteMoniker": "D:0:0:{6F9056A7-4C3B-4DA6-9E83-9F8AFEAF846A}|aichatbot\\aichatbot.vbproj|C:\\Benson\\School\\Year 10 IST\\Submission VB Programs\\AI-Chatbot-IST\\aichatbot\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{6F9056A7-4C3B-4DA6-9E83-9F8AFEAF846A}|aichatbot\\aichatbot.vbproj|solutionrelative:aichatbot\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6F9056A7-4C3B-4DA6-9E83-9F8AFEAF846A}|aichatbot\\aichatbot.vbproj|C:\\Users\\kiren\\source\\repos\\aichatbot\\aichatbot\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{6F9056A7-4C3B-4DA6-9E83-9F8AFEAF846A}|aichatbot\\aichatbot.vbproj|C:\\Benson\\School\\Year 10 IST\\Submission VB Programs\\AI-Chatbot-IST\\aichatbot\\formhome.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{6F9056A7-4C3B-4DA6-9E83-9F8AFEAF846A}|aichatbot\\aichatbot.vbproj|solutionrelative:aichatbot\\formhome.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F9056A7-4C3B-4DA6-9E83-9F8AFEAF846A}|aichatbot\\aichatbot.vbproj|C:\\Benson\\School\\Year 10 IST\\Submission VB Programs\\AI-Chatbot-IST\\aichatbot\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{6F9056A7-4C3B-4DA6-9E83-9F8AFEAF846A}|aichatbot\\aichatbot.vbproj|solutionrelative:aichatbot\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6F9056A7-4C3B-4DA6-9E83-9F8AFEAF846A}|aichatbot\\aichatbot.vbproj|C:\\Users\\kiren\\source\\repos\\aichatbot\\aichatbot\\formhome.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{6F9056A7-4C3B-4DA6-9E83-9F8AFEAF846A}|aichatbot\\aichatbot.vbproj|c:\\benson\\school\\year 10 ist\\submission vb programs\\ai-chatbot-ist\\aichatbot\\formhome.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{6F9056A7-4C3B-4DA6-9E83-9F8AFEAF846A}|aichatbot\\aichatbot.vbproj|solutionrelative:aichatbot\\formhome.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6F9056A7-4C3B-4DA6-9E83-9F8AFEAF846A}|aichatbot\\aichatbot.vbproj|c:\\users\\kiren\\source\\repos\\aichatbot\\aichatbot\\formhome.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{6F9056A7-4C3B-4DA6-9E83-9F8AFEAF846A}|aichatbot\\aichatbot.vbproj|solutionrelative:aichatbot\\formhome.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|aichatbot||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,19 +29,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Bookmark",
@@ -50,7 +49,11 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{2d7728c2-de0a-45b5-99aa-89b609dfde73}"
             },
             {
               "$type": "Bookmark",
@@ -58,53 +61,64 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Form1.vb",
-              "DocumentMoniker": "C:\\Users\\kiren\\source\\repos\\aichatbot\\aichatbot\\Form1.vb",
+              "DocumentIndex": 0,
+              "Title": "Form1.vb [Design]",
+              "DocumentMoniker": "C:\\Benson\\School\\Year 10 IST\\Submission VB Programs\\AI-Chatbot-IST\\aichatbot\\Form1.vb",
               "RelativeDocumentMoniker": "aichatbot\\Form1.vb",
-              "ToolTip": "C:\\Users\\kiren\\source\\repos\\aichatbot\\aichatbot\\Form1.vb",
-              "RelativeToolTip": "aichatbot\\Form1.vb",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAAAAAA",
+              "ToolTip": "C:\\Benson\\School\\Year 10 IST\\Submission VB Programs\\AI-Chatbot-IST\\aichatbot\\Form1.vb [Design]",
+              "RelativeToolTip": "aichatbot\\Form1.vb [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-10-27T04:39:50.825Z",
+              "WhenOpened": "2024-10-04T01:23:25.156Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FormHome.vb",
+              "DocumentMoniker": "C:\\Benson\\School\\Year 10 IST\\Submission VB Programs\\AI-Chatbot-IST\\aichatbot\\FormHome.vb",
+              "RelativeDocumentMoniker": "aichatbot\\FormHome.vb",
+              "ToolTip": "C:\\Benson\\School\\Year 10 IST\\Submission VB Programs\\AI-Chatbot-IST\\aichatbot\\FormHome.vb",
+              "RelativeToolTip": "aichatbot\\FormHome.vb",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAUAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-10-25T01:02:31.788Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Form1.vb [Design]",
-              "DocumentMoniker": "C:\\Users\\kiren\\source\\repos\\aichatbot\\aichatbot\\Form1.vb",
-              "RelativeDocumentMoniker": "aichatbot\\Form1.vb",
-              "ToolTip": "C:\\Users\\kiren\\source\\repos\\aichatbot\\aichatbot\\Form1.vb [Design]",
-              "RelativeToolTip": "aichatbot\\Form1.vb [Design]",
+              "DocumentIndex": 4,
+              "Title": "aichatbot",
+              "DocumentMoniker": "C:\\Benson\\School\\Year 10 IST\\Submission VB Programs\\AI-Chatbot-IST\\aichatbot\\aichatbot.vbproj",
+              "RelativeDocumentMoniker": "aichatbot\\aichatbot.vbproj",
+              "ToolTip": "C:\\Benson\\School\\Year 10 IST\\Submission VB Programs\\AI-Chatbot-IST\\aichatbot\\aichatbot.vbproj",
+              "RelativeToolTip": "aichatbot\\aichatbot.vbproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-10-27T06:38:00.693Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormHome.vb [Design]",
+              "DocumentMoniker": "C:\\Benson\\School\\Year 10 IST\\Submission VB Programs\\AI-Chatbot-IST\\aichatbot\\FormHome.vb",
+              "RelativeDocumentMoniker": "aichatbot\\FormHome.vb",
+              "ToolTip": "C:\\Benson\\School\\Year 10 IST\\Submission VB Programs\\AI-Chatbot-IST\\aichatbot\\FormHome.vb [Design]",
+              "RelativeToolTip": "aichatbot\\FormHome.vb [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-10-25T22:40:57.285Z",
+              "WhenOpened": "2024-10-25T00:51:51.562Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "FormHome.vb",
-              "DocumentMoniker": "C:\\Users\\kiren\\source\\repos\\aichatbot\\aichatbot\\FormHome.vb",
-              "RelativeDocumentMoniker": "aichatbot\\FormHome.vb",
-              "ToolTip": "C:\\Users\\kiren\\source\\repos\\aichatbot\\aichatbot\\FormHome.vb",
-              "RelativeToolTip": "aichatbot\\FormHome.vb",
-              "ViewState": "AQIAAAAAAAAAAAAAAAA8wAUAAAAAAAAA",
+              "Title": "Form1.vb",
+              "DocumentMoniker": "C:\\Benson\\School\\Year 10 IST\\Submission VB Programs\\AI-Chatbot-IST\\aichatbot\\Form1.vb",
+              "RelativeDocumentMoniker": "aichatbot\\Form1.vb",
+              "ToolTip": "C:\\Benson\\School\\Year 10 IST\\Submission VB Programs\\AI-Chatbot-IST\\aichatbot\\Form1.vb",
+              "RelativeToolTip": "aichatbot\\Form1.vb",
+              "ViewState": "AQIAAH4AAAAAAAAAAAAcwJQAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-10-25T22:46:04.723Z",
+              "WhenOpened": "2024-10-11T12:13:29.217Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FormHome.vb [Design]",
-              "DocumentMoniker": "C:\\Users\\kiren\\source\\repos\\aichatbot\\aichatbot\\FormHome.vb",
-              "RelativeDocumentMoniker": "aichatbot\\FormHome.vb",
-              "ToolTip": "C:\\Users\\kiren\\source\\repos\\aichatbot\\aichatbot\\FormHome.vb [Design]",
-              "RelativeToolTip": "aichatbot\\FormHome.vb [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-10-25T22:41:16.775Z",
-              "EditorCaption": " [Design]"
             }
           ]
         }

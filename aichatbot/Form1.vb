@@ -7,9 +7,9 @@ Public Class Form1
 
     Dim synth As New SpeechSynthesizer
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        sender.BackgroundImage = My.Resources.ResourceManager.GetObject("send-icon-click")
+        'sender.BackgroundImage = My.Resources.ResourceManager.GetObject("send-icon-click")
         RunSendMessages(TextBoxInput.Text)
-        sender.BackgroundImage = My.Resources.ResourceManager.GetObject("send-icon")
+        'sender.BackgroundImage = My.Resources.ResourceManager.GetObject("send-icon")
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -121,13 +121,13 @@ Public Class Form1
         End If
     End Sub
 
-    Private Sub Button1_MouseEnter(sender As Object, e As EventArgs) Handles Button1.MouseEnter
-        sender.BackgroundImage = My.Resources.ResourceManager.GetObject("send-icon-hover")
-    End Sub
+    'Private Sub Button1_MouseEnter(sender As Object, e As EventArgs) Handles Button1.MouseEnter
+    'sender.BackgroundImage = My.Resources.ResourceManager.GetObject("send-icon-hover")
+    'End Sub
 
-    Private Sub Button1_MouseExit(sender As Object, e As EventArgs) Handles Button1.MouseLeave
-        sender.BackgroundImage = My.Resources.ResourceManager.GetObject("send-icon")
-    End Sub
+    'Private Sub Button1_MouseExit(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+    'sender.BackgroundImage = My.Resources.ResourceManager.GetObject("send-icon")
+    'End Sub
 
     Private Sub ButtonHome_Click(sender As Object, e As EventArgs) Handles ButtonHome.Click
         FormHome.Show()
@@ -139,7 +139,11 @@ Public Class Form1
         MyBase.OnFormClosing(e)
     End Sub
 
-    Private Sub FlowSuggestions_Paint(sender As Object, e As PaintEventArgs) Handles FlowSuggestions.Paint
-
-    End Sub
+    Protected Overrides ReadOnly Property CreateParams() As CreateParams
+        Get
+            Dim cp As CreateParams = MyBase.CreateParams
+            cp.ExStyle = cp.ExStyle Or &H2000000
+            Return cp
+        End Get
+    End Property 'CreateParams
 End Class
