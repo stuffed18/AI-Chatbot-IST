@@ -93,13 +93,13 @@ Partial Class Form1
         '
         Me.TextBoxInput.BackColor = System.Drawing.Color.White
         Me.TextBoxInput.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBoxInput.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBoxInput.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBoxInput.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.TextBoxInput.Location = New System.Drawing.Point(280, 561)
+        Me.TextBoxInput.Location = New System.Drawing.Point(280, 571)
         Me.TextBoxInput.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBoxInput.Multiline = True
         Me.TextBoxInput.Name = "TextBoxInput"
-        Me.TextBoxInput.Size = New System.Drawing.Size(597, 52)
+        Me.TextBoxInput.Size = New System.Drawing.Size(597, 26)
         Me.TextBoxInput.TabIndex = 2
         '
         'Button1
@@ -143,7 +143,7 @@ Partial Class Form1
         'PictureBox3
         '
         Me.PictureBox3.Image = Global.aichatbot.My.Resources.Resources.Copy_of_vbnet_ai_menu_page1
-        Me.PictureBox3.Location = New System.Drawing.Point(31, 128)
+        Me.PictureBox3.Location = New System.Drawing.Point(31, 136)
         Me.PictureBox3.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(180, 49)
@@ -154,12 +154,12 @@ Partial Class Form1
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(238, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(21, 87)
+        Me.Label1.Location = New System.Drawing.Point(20, 87)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(128, 31)
+        Me.Label1.Size = New System.Drawing.Size(130, 37)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Chat with"
         '

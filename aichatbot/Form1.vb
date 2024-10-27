@@ -32,6 +32,7 @@ Public Class Form1
         Suggestion.Text = str
         Suggestion.AutoSize = True
         Suggestion.BackColor = ColorTranslator.FromHtml("#BCD2EE")
+        Suggestion.Font = New Font("Segoe UI", 8)
         AddHandler Suggestion.Click, AddressOf SuggestionClick
         FlowSuggestions.Controls.Add(Suggestion)
     End Sub
@@ -86,7 +87,7 @@ Public Class Form1
         NewMessage.Name = "chat" & Index
 
         NewMessage.Text = Message
-        NewMessage.Font = New Font(NewMessage.Font.FontFamily.ToString(), 8)
+        NewMessage.Font = New Font("Segoe UI", 8)
 
         NewMessage.Padding = New Padding(NewMessage.Padding.Left + 3, NewMessage.Padding.Top + 8, NewMessage.Padding.Right + 3, NewMessage.Padding.Bottom + 8)
 
