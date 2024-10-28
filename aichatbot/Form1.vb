@@ -202,7 +202,7 @@ Public Class Form1
             Dim Subwords As String() = Split(Word, "/")
             Dim Valid As Boolean = False
             For Each SWord In Subwords
-                If Text.Contains(SWord) Then
+                If ContainsWord(Text, SWord) Then
                     Valid = True
                 End If
             Next
@@ -211,6 +211,15 @@ Public Class Form1
             End If
         Next
         Return True
+    End Function
+
+    Private Function ContainsWord(Text As String, CWord As String)
+        For Each Word In Split(Text, " ")
+            If Word = CWord Then
+                Return True
+            End If
+        Next
+        Return False
     End Function
 
     Private Function RandomItemFrom(ByVal ParamArray List As String())
