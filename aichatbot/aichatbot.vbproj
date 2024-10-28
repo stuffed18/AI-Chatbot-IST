@@ -259,5 +259,17 @@
   <ItemGroup>
     <None Include="Resources\Untitled design%2816%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\volume-high-solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\volume-high-solid %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\volume-xmark-solid %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\volume-xmark-solid.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

@@ -31,6 +31,8 @@ Partial Class Form1
         Me.Button1 = New System.Windows.Forms.Button()
         Me.FlowSuggestions = New System.Windows.Forms.FlowLayoutPanel()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.ComboBoxVoice = New System.Windows.Forms.ComboBox()
+        Me.ButtonSound = New System.Windows.Forms.Button()
         Me.ButtonClearChat = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
@@ -113,10 +115,10 @@ Partial Class Form1
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.Black
-        Me.Button1.Location = New System.Drawing.Point(677, 461)
+        Me.Button1.Location = New System.Drawing.Point(679, 462)
         Me.Button1.Margin = New System.Windows.Forms.Padding(2)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(35, 35)
+        Me.Button1.Size = New System.Drawing.Size(30, 30)
         Me.Button1.TabIndex = 1
         Me.Button1.UseVisualStyleBackColor = False
         '
@@ -132,6 +134,8 @@ Partial Class Form1
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(96, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.ComboBoxVoice)
+        Me.Panel1.Controls.Add(Me.ButtonSound)
         Me.Panel1.Controls.Add(Me.ButtonClearChat)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.PictureBox3)
@@ -141,6 +145,33 @@ Partial Class Form1
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(173, 544)
         Me.Panel1.TabIndex = 8
+        '
+        'ComboBoxVoice
+        '
+        Me.ComboBoxVoice.BackColor = System.Drawing.Color.White
+        Me.ComboBoxVoice.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBoxVoice.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ComboBoxVoice.FormattingEnabled = True
+        Me.ComboBoxVoice.IntegralHeight = False
+        Me.ComboBoxVoice.Items.AddRange(New Object() {"Male Voice", "Female Voice"})
+        Me.ComboBoxVoice.Location = New System.Drawing.Point(65, 446)
+        Me.ComboBoxVoice.Name = "ComboBoxVoice"
+        Me.ComboBoxVoice.Size = New System.Drawing.Size(87, 21)
+        Me.ComboBoxVoice.TabIndex = 12
+        '
+        'ButtonSound
+        '
+        Me.ButtonSound.BackgroundImage = Global.aichatbot.My.Resources.Resources.volume_high_solid
+        Me.ButtonSound.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ButtonSound.FlatAppearance.BorderSize = 0
+        Me.ButtonSound.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(96, Byte), Integer))
+        Me.ButtonSound.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(96, Byte), Integer))
+        Me.ButtonSound.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonSound.Location = New System.Drawing.Point(24, 441)
+        Me.ButtonSound.Name = "ButtonSound"
+        Me.ButtonSound.Size = New System.Drawing.Size(30, 30)
+        Me.ButtonSound.TabIndex = 11
+        Me.ButtonSound.UseVisualStyleBackColor = True
         '
         'ButtonClearChat
         '
@@ -152,20 +183,20 @@ Partial Class Form1
         Me.ButtonClearChat.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonClearChat.Font = New System.Drawing.Font("Segoe UI", 10.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonClearChat.ForeColor = System.Drawing.Color.White
-        Me.ButtonClearChat.Location = New System.Drawing.Point(19, 478)
+        Me.ButtonClearChat.Location = New System.Drawing.Point(26, 483)
         Me.ButtonClearChat.Name = "ButtonClearChat"
-        Me.ButtonClearChat.Size = New System.Drawing.Size(29, 29)
+        Me.ButtonClearChat.Size = New System.Drawing.Size(25, 25)
         Me.ButtonClearChat.TabIndex = 9
         Me.ButtonClearChat.UseVisualStyleBackColor = True
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 17.0!, System.Drawing.FontStyle.Bold)
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 13.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle))
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(238, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(48, 477)
+        Me.Label2.Location = New System.Drawing.Point(53, 482)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(123, 31)
+        Me.Label2.Size = New System.Drawing.Size(99, 25)
         Me.Label2.TabIndex = 10
         Me.Label2.Text = "Clear Chat"
         '
@@ -234,4 +265,6 @@ Partial Class Form1
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents ButtonClearChat As Button
     Friend WithEvents Label2 As Label
+    Friend WithEvents ButtonSound As Button
+    Friend WithEvents ComboBoxVoice As ComboBox
 End Class

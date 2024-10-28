@@ -3,6 +3,7 @@ Imports System.Speech.Synthesis
 
 Public Class Form1
     Dim Index As Integer = 0
+    Dim SoundFlag As Boolean = True
     Private Shared rand As New Random
 
     Dim synth As New SpeechSynthesizer
@@ -18,13 +19,13 @@ Public Class Form1
         SendMessage(False, RandomItemFrom("Hi, I'm Codex, your personal chatbot assistant. What would you like to know about VB.net Windows Forms?"))
 
         FlowSuggestions.Controls.Clear()
-        AddSuggestion("How do buttons work?")
-        AddSuggestion("How do I make a form?")
-        AddSuggestion("What does the properties window do?")
+        AddSuggestion("How do I declare a variable?")
+        AddSuggestion("How do I handle a button click event?")
 
         FlowSuggestions.BackColor = Color.FromArgb(4, 31, 96)
         PictureBox1.BackColor = Color.FromArgb(4, 31, 96)
 
+        ComboBoxVoice.SelectedIndex = 0
     End Sub
 
     Private Sub AddSuggestion(str)
@@ -52,17 +53,7 @@ Public Class Form1
                 SendImage()
             End If
 
-            Dim QuestionSuggestions = {
-                "How do buttons work?",
-                "How do I make a form?",
-                "What does the properties window do?",
-                "How do I declare a variable?",
-                "How do I create a for loop?",
-                "How do I change the text of a Label?",
-                "How do I handle a button click event?",
-                "How do I check if a string contains another string?",
-                "How do I set the default startup form in a Windows Forms application?"
-            }
+            Dim QuestionSuggestions = Split("What is the meaning of life?/How do I declare a variable?/How do I create a For loop?/How can I change the text of a Label?/How do I handle a button click event?/How do I check if a string contains another string?/How do I convert a string to an integer?/How do I add a button to a Windows Form?/How do I set the default startup form in a VB.NET Windows Forms application?/How do I create a form with a transparent background?/How do I create a custom function?/How do I check if a number is even or odd?/How do I change the background colour of a form?/How do I create an array?/How do I add an item to a ListBox?/How do I add a background image to a form?/How do I create a class?/How do I disable resizing of a Windows Form?/How can I remove all items from a ListBox?/How do I close a Form with code?/How do I generate random numbers?/How do I open a new form?/What are the advantages of following a consistent naming convention in code?/When should I consider refactoring my code?/What is the DRY principle, and why is it important?", "/")
 
             FlowSuggestions.Controls.Clear()
             For i As Integer = 1 To rand.Next(3, 4)
@@ -190,6 +181,10 @@ Public Class Form1
                                   "Happy coding!")
         ElseIf Multicontains(UserInput, "meaning of life/meaning of the universe/meaning of it all/meaning of everything") Then
             Return RandomItemFrom("I am an AI chatbot made to answer questions about VB.net, not the meaning of life. However, I hope you find some meaning in your coding journey!")
+        ElseIf Multicontains(UserInput, "while", "loop") Then
+            Return RandomItemFrom("A While loop can be created like this: \n     For i As Integer = 1 To 10 \n     Console.WriteLine(i) \n Next")
+        ElseIf Multicontains(UserInput, "loop") Then
+            Return RandomItemFrom("A For loop can be created like this: \n     For i As Integer = 1 To 10 \n     Console.WriteLine(i) \n Next")
         End If
 
         Return RandomItemFrom("Sorry, I'm not sure I understand.",
@@ -269,5 +264,41 @@ Public Class Form1
     Private Sub ButtonClearChat_MouseLeave(sender As Object, e As EventArgs) Handles ButtonClearChat.MouseLeave, Label2.MouseLeave
         Label2.ForeColor = ColorTranslator.FromHtml("#c8b3ee")
         ButtonClearChat.BackgroundImage = My.Resources.Resources.Untitled_design_5_2
+    End Sub
+    Private Sub ButtonSound_Click(sender As Object, e As EventArgs) Handles ButtonSound.Click
+        If SoundFlag Then
+            SoundFlag = False
+            sender.BackgroundImage = My.Resources.Resources.volume_xmark_solid__1_
+            synth.Volume = 0
+            synth.SpeakAsyncCancelAll()
+        Else
+            SoundFlag = True
+            sender.BackgroundImage = My.Resources.Resources.volume_high_solid__1_
+            synth.Volume = 100
+        End If
+    End Sub
+
+    Private Sub ButtonSound_MouseEnter(sender As Object, e As EventArgs) Handles ButtonSound.MouseEnter
+        If SoundFlag Then
+            sender.BackgroundImage = My.Resources.Resources.volume_high_solid__1_
+        Else
+            sender.BackgroundImage = My.Resources.Resources.volume_xmark_solid__1_
+        End If
+    End Sub
+
+    Private Sub ButtonSound_MouseLeave(sender As Object, e As EventArgs) Handles ButtonSound.MouseLeave
+        If SoundFlag Then
+            sender.BackgroundImage = My.Resources.Resources.volume_high_solid
+        Else
+            sender.BackgroundImage = My.Resources.Resources.volume_xmark_solid
+        End If
+    End Sub
+
+    Private Sub ComboBoxVoice_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBoxVoice.SelectedIndexChanged
+        If ComboBoxVoice.SelectedIndex = 0 Then
+            synth.SelectVoiceByHints(VoiceGender.Male)
+        Else
+            synth.SelectVoiceByHints(VoiceGender.Female)
+        End If
     End Sub
 End Class
