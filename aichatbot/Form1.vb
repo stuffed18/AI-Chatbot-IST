@@ -213,7 +213,17 @@ Public Class Form1
         Return True
     End Function
 
-    Private Function ContainsWord(Text As String, CWord As String)
+    Private Function ContainsWord(Text_ As String, CWord As String)
+        Dim Text As String = Text_.Replace("?", "")
+        Text = Text.Replace(".", "")
+        Text = Text.Replace(",", "")
+        Text = Text.Replace("!", "")
+        Text = Text.Replace("(", "")
+        Text = Text.Replace(")", "")
+        Text = Text.Replace("*", "")
+        Text = Text.Replace("&", "")
+        Text = Text.Replace("/", "")
+        Text = Text.Replace("\", "")
         For Each Word In Split(Text, " ")
             If Word = CWord Then
                 Return True
