@@ -87,6 +87,12 @@
     <Compile Include="FormHome.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormQB.Designer.vb">
+      <DependentUpon>FormQB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormQB.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -110,6 +116,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormHome.resx">
       <DependentUpon>FormHome.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQB.resx">
+      <DependentUpon>FormQB.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -219,6 +228,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\sendpink.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vs-background.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

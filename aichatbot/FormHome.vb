@@ -32,4 +32,9 @@
             Me.Close()
         End If
     End Sub
+
+    Private Sub ButtonQB_Click(sender As Object, e As EventArgs) Handles ButtonQB.Click
+        FormQB.Show()
+        Me.Hide()
+    End Sub
 End Class

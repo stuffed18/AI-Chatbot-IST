@@ -15,7 +15,7 @@ Public Class Form1
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         TextBoxInput.MaxLength = 200
 
-        SendMessage(False, RandomItemFrom("Hi, I'm Kiren, your personal chatbot assistant. What would you like to know about VB.net Windows Forms?"))
+        SendMessage(False, RandomItemFrom("Hi, I'm Codex, your personal chatbot assistant. What would you like to know about VB.net Windows Forms?"))
 
         FlowSuggestions.Controls.Clear()
         AddSuggestion("How do buttons work?")
