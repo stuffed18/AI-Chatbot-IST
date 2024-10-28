@@ -48,10 +48,10 @@ Partial Class Form1
         Me.FlowLayoutPanel1.AutoScroll = True
         Me.FlowLayoutPanel1.BackColor = System.Drawing.Color.Transparent
         Me.FlowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.BottomUp
-        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(185, -6)
+        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(172, -6)
         Me.FlowLayoutPanel1.Margin = New System.Windows.Forms.Padding(2)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(542, 395)
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(580, 395)
         Me.FlowLayoutPanel1.TabIndex = 0
         Me.FlowLayoutPanel1.WrapContents = False
         '

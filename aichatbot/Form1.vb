@@ -66,6 +66,8 @@ Public Class Form1
         NewImage.SizeMode = PictureBoxSizeMode.StretchImage
         NewImage.Size = New System.Drawing.Size(200, 200)
 
+        NewImage.Margin = New Padding(NewImage.Margin.Left + 5, NewImage.Margin.Top + 5, NewImage.Margin.Right, NewImage.Margin.Bottom + 5)
+
         FlowLayoutPanel1.Controls.Add(NewImage)
         FlowLayoutPanel1.Controls.SetChildIndex(NewImage, 0)
         FlowLayoutPanel1.ScrollControlIntoView(NewImage)
@@ -74,8 +76,6 @@ Public Class Form1
     Private Sub SendMessage(UserSent As Boolean, Message As String)
         Dim NewPanel As New FlowLayoutPanel
         Dim NewMessage As New Label
-
-        Dim CodeMessage As Label
 
         Dim Message2 = Split(Message, ":: ")
 
@@ -88,11 +88,11 @@ Public Class Form1
             NewPanel.BackColor = ColorTranslator.FromHtml("#BCD2EE")
             NewMessage.BackColor = ColorTranslator.FromHtml("#BCD2EE")
 
-            Dim LeftMargin = FlowLayoutPanel1.Width - NewMessage.PreferredWidth - NewPanel.Margin.Right - 20 - NewPanel.Padding.Left - NewPanel.Padding.Right
+            Dim LeftMargin = FlowLayoutPanel1.Width - NewMessage.PreferredWidth - NewPanel.Margin.Right - 25 - NewPanel.Padding.Left - NewPanel.Padding.Right
             If LeftMargin > 0 Then
-                NewPanel.Margin = New Padding(LeftMargin, NewPanel.Margin.Top + 5, 0, NewPanel.Margin.Bottom + 5)
+                NewPanel.Margin = New Padding(LeftMargin, NewPanel.Margin.Top + 5, 5, NewPanel.Margin.Bottom + 5)
             Else
-                NewPanel.Margin = New Padding(FlowLayoutPanel1.Width - 300 - NewPanel.Margin.Right - 20 - NewPanel.Padding.Left - NewPanel.Padding.Right, NewPanel.Margin.Top + 5, 0, NewPanel.Margin.Bottom + 5)
+                NewPanel.Margin = New Padding(FlowLayoutPanel1.Width - 300 - NewPanel.Margin.Right - 20 - NewPanel.Padding.Left - NewPanel.Padding.Right, NewPanel.Margin.Top + 5, 5, NewPanel.Margin.Bottom + 5)
             End If
 
             NewPanel.Anchor = AnchorStyles.Right
@@ -113,13 +113,13 @@ Public Class Form1
         If UserSent = False And Message.Contains(":: ") Then
             NewMessage.Text &= ":" & vbNewLine & vbNewLine
 
-            CodeMessage = New Label
+            Dim CodeMessage As New Label
 
             CodeMessage.Text = Message2(1)
             CodeMessage.BackColor = ColorTranslator.FromHtml("#c8b3ee")
             CodeMessage.ForeColor = ColorTranslator.FromHtml("#591057")
             CodeMessage.AutoSize = True
-            CodeMessage.Padding = New Padding(CodeMessage.Padding.Left + 5, CodeMessage.Padding.Top + 5, NewPanel.PreferredSize.Width - CodeMessage.PreferredWidth - CodeMessage.Padding.Left - 5, CodeMessage.Padding.Bottom + 5)
+            CodeMessage.Padding = New Padding(CodeMessage.Padding.Left + 5, CodeMessage.Padding.Top + 5, NewPanel.PreferredSize.Width - CodeMessage.PreferredWidth - CodeMessage.Padding.Left - 15, CodeMessage.Padding.Bottom + 5)
 
             NewPanel.Controls.Add(CodeMessage)
         End If
@@ -133,6 +133,7 @@ Public Class Form1
             synth.SpeakAsync(Message2(0))
         End If
     End Sub
+
 
     Private Sub Button1_MouseEnter(sender As Object, e As EventArgs) Handles Button1.MouseEnter
         sender.BackgroundImage = My.Resources.Resources.sendpink
@@ -191,7 +192,7 @@ Public Class Form1
         ElseIf Multicontains(UserInput, "button", "click/tap/event") Then
             Return RandomItemFrom("You can handle a button click event by double clicking the button in the designer. This will automatically add an event handler that looks something like this:: Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click \n MessageBox.Show(""Button Clicked!"")")
         ElseIf Multicontains(UserInput, "string", "contains/has/contain", "check/whether/if/when") Then
-            Return RandomItemFrom("You can use the Contains method:: Dim str As String = ""Hello World"" \n If str.Contains(""World"") Then \n     Console.WriteLine(""String found!"") \n End If")
+            Return RandomItemFrom("You can use the Contains method:: Dim Text As String = ""Hello World"" \n If Text.Contains(""World"") Then \n     Console.WriteLine(""String found!"") \n End If")
         ElseIf Multicontains(UserInput, "hello/hi/hallo/hey/good day/afternoon/morning/evening/bonjour/greet/howdy/long time/hiya/greeting/whats up/what's up") Then
             Return RandomItemFrom("Hello! How can I assist you today?",
                                   "What's up?",
@@ -206,6 +207,8 @@ Public Class Form1
             Return RandomItemFrom("A While loop can be used to repeat code while something is true. For example, the following code repeats while i is lower or equal to 10: While i <= 10 \n     Console.WriteLine(i) \n     i += 1 \n End While")
         ElseIf Multicontains(UserInput, "loop") Then
             Return RandomItemFrom("A basic For loop can be used to repeat code Like so: For i As Integer = 1 To 10 \n     Console.WriteLine(i)Next")
+        ElseIf Multicontains(UserInput, "label") Then
+            Return RandomItemFrom("You can change the text a Label displays by setting it in the Properties window under the property ‘Text’. To change the text by code, you can set the property like so:: Label1.Text = ""New Text""")
         End If
 
         Return RandomItemFrom("Sorry, I'm not sure I understand.",
