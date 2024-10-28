@@ -28,7 +28,9 @@ Partial Class FormQB
         Me.ButtonClearChat = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.FlowLayoutPanelQB = New System.Windows.Forms.FlowLayoutPanel()
+        Me.transblackpanel = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
+        Me.transblackpanel.SuspendLayout()
         Me.SuspendLayout()
         '
         'ButtonHome
@@ -40,10 +42,10 @@ Partial Class FormQB
         Me.ButtonHome.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.ButtonHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.ButtonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonHome.Location = New System.Drawing.Point(12, 12)
+        Me.ButtonHome.Location = New System.Drawing.Point(22, 13)
         Me.ButtonHome.Margin = New System.Windows.Forms.Padding(2)
         Me.ButtonHome.Name = "ButtonHome"
-        Me.ButtonHome.Size = New System.Drawing.Size(43, 41)
+        Me.ButtonHome.Size = New System.Drawing.Size(43, 43)
         Me.ButtonHome.TabIndex = 9
         Me.ButtonHome.UseVisualStyleBackColor = False
         '
@@ -51,6 +53,7 @@ Partial Class FormQB
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.Panel1.Controls.Add(Me.FlowLayoutPanel1)
+        Me.Panel1.Controls.Add(Me.ButtonHome)
         Me.Panel1.Controls.Add(Me.ButtonClearChat)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Location = New System.Drawing.Point(-8, -2)
@@ -84,7 +87,7 @@ Partial Class FormQB
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(238, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(15, 71)
+        Me.Label1.Location = New System.Drawing.Point(15, 59)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(124, 74)
         Me.Label1.TabIndex = 0
@@ -95,11 +98,20 @@ Partial Class FormQB
         Me.FlowLayoutPanelQB.AutoScroll = True
         Me.FlowLayoutPanelQB.BackColor = System.Drawing.Color.Transparent
         Me.FlowLayoutPanelQB.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
-        Me.FlowLayoutPanelQB.Location = New System.Drawing.Point(257, 26)
+        Me.FlowLayoutPanelQB.Location = New System.Drawing.Point(3, 3)
         Me.FlowLayoutPanelQB.Name = "FlowLayoutPanelQB"
-        Me.FlowLayoutPanelQB.Size = New System.Drawing.Size(422, 499)
+        Me.FlowLayoutPanelQB.Size = New System.Drawing.Size(444, 473)
         Me.FlowLayoutPanelQB.TabIndex = 11
         Me.FlowLayoutPanelQB.WrapContents = False
+        '
+        'transblackpanel
+        '
+        Me.transblackpanel.BackColor = System.Drawing.Color.Transparent
+        Me.transblackpanel.Controls.Add(Me.FlowLayoutPanelQB)
+        Me.transblackpanel.Location = New System.Drawing.Point(235, 27)
+        Me.transblackpanel.Name = "transblackpanel"
+        Me.transblackpanel.Size = New System.Drawing.Size(444, 472)
+        Me.transblackpanel.TabIndex = 12
         '
         'FormQB
         '
@@ -107,14 +119,15 @@ Partial Class FormQB
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.aichatbot.My.Resources.Resources.vs_background
         Me.ClientSize = New System.Drawing.Size(755, 537)
-        Me.Controls.Add(Me.FlowLayoutPanelQB)
-        Me.Controls.Add(Me.ButtonHome)
         Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.transblackpanel)
+        Me.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "FormQB"
         Me.Text = "FormQB"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        Me.transblackpanel.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -124,4 +137,5 @@ Partial Class FormQB
     Friend WithEvents Label1 As Label
     Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
     Friend WithEvents FlowLayoutPanelQB As FlowLayoutPanel
+    Friend WithEvents transblackpanel As Panel
 End Class

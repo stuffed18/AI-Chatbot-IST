@@ -13,6 +13,8 @@
         ButtonQB.Location = New System.Drawing.Point(ButtonQB.Location.X - 400, ButtonQB.Location.Y)
         ButtonEval.Location = New System.Drawing.Point(ButtonEval.Location.X + 400, ButtonEval.Location.Y)
         Timer1.Start()
+
+
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick

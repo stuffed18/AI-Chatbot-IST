@@ -31,7 +31,7 @@ Public Class Form1
         Dim Suggestion As New Button
         Suggestion.Text = str
         Suggestion.AutoSize = True
-        Suggestion.BackColor = ColorTranslator.FromHtml("#BCD2EE")
+        Suggestion.BackColor = ColorTranslator.FromHtml("#FFFFFF")
         Suggestion.Font = New Font("Segoe UI", 8)
         AddHandler Suggestion.Click, AddressOf SuggestionClick
         FlowSuggestions.Controls.Add(Suggestion)
@@ -244,11 +244,12 @@ Public Class Form1
     End Sub
 
     Private Sub ButtonClearChat_MouseEnter(sender As Object, e As EventArgs) Handles ButtonClearChat.MouseEnter
-        sender.ForeColor = ColorTranslator.FromHtml("#fa52bf")
+        sender.BackgroundImage = My.Resources.Resources.Untitled_design_8_
+
     End Sub
 
     Private Sub ButtonClearChat_MouseLeave(sender As Object, e As EventArgs) Handles ButtonClearChat.MouseLeave
-        sender.ForeColor = Color.White
+        sender.BackgroundImage = My.Resources.Resources.Untitled_design_5_2
     End Sub
 
     Private Sub ButtonHome_MouseEnter(sender As Object, e As EventArgs) Handles ButtonHome.MouseEnter
@@ -258,4 +259,28 @@ Public Class Form1
     Private Sub ButtonHome_MouseLeave(sender As Object, e As EventArgs) Handles ButtonHome.MouseLeave
         sender.BackgroundImage = My.Resources.Resources.home_button_logo
     End Sub
+
+    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+        Dim Answer As DialogResult = MessageBox.Show("Are you sure you want to clear chat history?", "VB.net AI asks:", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
+        If Answer = vbYes Then
+            FlowLayoutPanel1.Controls.Clear()
+            SendMessage(False, RandomItemFrom("Hi, let's start over. What would you like to know about VB.net.",
+                                              "Alright, resetting. How can I assist you today?",
+                                              "Let's have a new conversation. What can I help you with?"))
+        End If
+
+    End Sub
+    Private Sub Label2_MouseEnter(sender As Object, e As EventArgs) Handles Label2.MouseEnter
+        sender.ForeColor = ColorTranslator.FromHtml("#fa52bf")
+        ButtonClearChat.BackgroundImage = My.Resources.Resources.Untitled_design_8_
+
+    End Sub
+
+    Private Sub Label2_MouseLeave(sender As Object, e As EventArgs) Handles Label2.MouseLeave
+        sender.ForeColor = ColorTranslator.FromHtml("#c8b3ee")
+        ButtonClearChat.BackgroundImage = My.Resources.Resources.Untitled_design_5_2
+
+    End Sub
+
+
 End Class

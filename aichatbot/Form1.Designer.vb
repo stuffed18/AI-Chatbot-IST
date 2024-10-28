@@ -32,6 +32,7 @@ Partial Class Form1
         Me.FlowSuggestions = New System.Windows.Forms.FlowLayoutPanel()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.ButtonClearChat = New System.Windows.Forms.Button()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -81,10 +82,10 @@ Partial Class Form1
         Me.ButtonHome.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.ButtonHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.ButtonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonHome.Location = New System.Drawing.Point(8, 9)
+        Me.ButtonHome.Location = New System.Drawing.Point(23, 16)
         Me.ButtonHome.Margin = New System.Windows.Forms.Padding(2)
         Me.ButtonHome.Name = "ButtonHome"
-        Me.ButtonHome.Size = New System.Drawing.Size(43, 41)
+        Me.ButtonHome.Size = New System.Drawing.Size(43, 43)
         Me.ButtonHome.TabIndex = 4
         Me.ButtonHome.UseVisualStyleBackColor = False
         '
@@ -132,8 +133,10 @@ Partial Class Form1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.Panel1.Controls.Add(Me.ButtonClearChat)
+        Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.PictureBox3)
         Me.Panel1.Controls.Add(Me.Label1)
+        Me.Panel1.Controls.Add(Me.ButtonHome)
         Me.Panel1.Location = New System.Drawing.Point(-12, -5)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(173, 544)
@@ -141,18 +144,30 @@ Partial Class Form1
         '
         'ButtonClearChat
         '
+        Me.ButtonClearChat.BackgroundImage = Global.aichatbot.My.Resources.Resources.Untitled_design_5_2
+        Me.ButtonClearChat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ButtonClearChat.FlatAppearance.BorderSize = 0
         Me.ButtonClearChat.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
         Me.ButtonClearChat.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.ButtonClearChat.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonClearChat.Font = New System.Drawing.Font("Segoe UI", 10.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonClearChat.ForeColor = System.Drawing.Color.White
-        Me.ButtonClearChat.Location = New System.Drawing.Point(42, 491)
+        Me.ButtonClearChat.Location = New System.Drawing.Point(19, 478)
         Me.ButtonClearChat.Name = "ButtonClearChat"
-        Me.ButtonClearChat.Size = New System.Drawing.Size(97, 27)
+        Me.ButtonClearChat.Size = New System.Drawing.Size(29, 29)
         Me.ButtonClearChat.TabIndex = 9
-        Me.ButtonClearChat.Text = "Clear Chat"
         Me.ButtonClearChat.UseVisualStyleBackColor = True
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 17.0!, System.Drawing.FontStyle.Bold)
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(238, Byte), Integer))
+        Me.Label2.Location = New System.Drawing.Point(48, 477)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(123, 31)
+        Me.Label2.TabIndex = 10
+        Me.Label2.Text = "Clear Chat"
         '
         'PictureBox3
         '
@@ -187,7 +202,6 @@ Partial Class Form1
         Me.Controls.Add(Me.TextBoxInput)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.FlowSuggestions)
-        Me.Controls.Add(Me.ButtonHome)
         Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Panel1)
@@ -219,4 +233,5 @@ Partial Class Form1
     Friend WithEvents Label1 As Label
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents ButtonClearChat As Button
+    Friend WithEvents Label2 As Label
 End Class
