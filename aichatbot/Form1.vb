@@ -31,7 +31,7 @@ Public Class Form1
         Dim Suggestion As New Button
         Suggestion.Text = str
         Suggestion.AutoSize = True
-        Suggestion.BackColor = ColorTranslator.FromHtml("#FFFFFF")
+        Suggestion.BackColor = ColorTranslator.FromHtml("#BCD2EE")
         Suggestion.Font = New Font("Segoe UI", 8)
         AddHandler Suggestion.Click, AddressOf SuggestionClick
         FlowSuggestions.Controls.Add(Suggestion)
@@ -178,7 +178,7 @@ Public Class Form1
             Return RandomItemFrom("In VB.NET, you can declare a variable using the Dim keyword. For example: \n Dim myNumber As Integer")
         ElseIf Multicontains(UserInput, "button", "click/tap/event") Then
             Return RandomItemFrom("You can handle a button click event by double clicking the button in the designer. This will automatically add an event handler that looks something like this: \n Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click \n MessageBox.Show(""Button Clicked!"")")
-        ElseIf Multicontains(UserInput, "string", "contains,has,contain", "check,whether,if,when") Then
+        ElseIf Multicontains(UserInput, "string", "contains/has/contain", "check/whether/if/when") Then
             Return RandomItemFrom("You can use the Contains method: \n Dim str As String = ""Hello World"" \n If str.Contains(""World"") Then \n     Console.WriteLine(""String found!"") \n End If")
         ElseIf Multicontains(UserInput, "hello/hi/hallo/hey/good day/afternoon/morning/evening/bonjour/greet/howdy/long time/hiya/greeting/whats up/what's up") Then
             Return RandomItemFrom("Hello! How can I assist you today?",
@@ -213,7 +213,17 @@ Public Class Form1
         Return True
     End Function
 
-    Private Function ContainsWord(Text As String, CWord As String)
+    Private Function ContainsWord(Text_ As String, CWord As String)
+        Dim Text As String = Text_.Replace("?", "")
+        Text = Text.Replace(".", "")
+        Text = Text.Replace(",", "")
+        Text = Text.Replace("!", "")
+        Text = Text.Replace("(", "")
+        Text = Text.Replace(")", "")
+        Text = Text.Replace("*", "")
+        Text = Text.Replace("&", "")
+        Text = Text.Replace("/", "")
+        Text = Text.Replace("\", "")
         For Each Word In Split(Text, " ")
             If Word = CWord Then
                 Return True
@@ -244,12 +254,11 @@ Public Class Form1
     End Sub
 
     Private Sub ButtonClearChat_MouseEnter(sender As Object, e As EventArgs) Handles ButtonClearChat.MouseEnter
-        sender.BackgroundImage = My.Resources.Resources.Untitled_design_8_
-
+        sender.ForeColor = ColorTranslator.FromHtml("#fa52bf")
     End Sub
 
     Private Sub ButtonClearChat_MouseLeave(sender As Object, e As EventArgs) Handles ButtonClearChat.MouseLeave
-        sender.BackgroundImage = My.Resources.Resources.Untitled_design_5_2
+        sender.ForeColor = Color.White
     End Sub
 
     Private Sub ButtonHome_MouseEnter(sender As Object, e As EventArgs) Handles ButtonHome.MouseEnter
@@ -259,28 +268,4 @@ Public Class Form1
     Private Sub ButtonHome_MouseLeave(sender As Object, e As EventArgs) Handles ButtonHome.MouseLeave
         sender.BackgroundImage = My.Resources.Resources.home_button_logo
     End Sub
-
-    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
-        Dim Answer As DialogResult = MessageBox.Show("Are you sure you want to clear chat history?", "VB.net AI asks:", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
-        If Answer = vbYes Then
-            FlowLayoutPanel1.Controls.Clear()
-            SendMessage(False, RandomItemFrom("Hi, let's start over. What would you like to know about VB.net.",
-                                              "Alright, resetting. How can I assist you today?",
-                                              "Let's have a new conversation. What can I help you with?"))
-        End If
-
-    End Sub
-    Private Sub Label2_MouseEnter(sender As Object, e As EventArgs) Handles Label2.MouseEnter
-        sender.ForeColor = ColorTranslator.FromHtml("#fa52bf")
-        ButtonClearChat.BackgroundImage = My.Resources.Resources.Untitled_design_8_
-
-    End Sub
-
-    Private Sub Label2_MouseLeave(sender As Object, e As EventArgs) Handles Label2.MouseLeave
-        sender.ForeColor = ColorTranslator.FromHtml("#c8b3ee")
-        ButtonClearChat.BackgroundImage = My.Resources.Resources.Untitled_design_5_2
-
-    End Sub
-
-
 End Class
