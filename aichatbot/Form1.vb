@@ -185,11 +185,13 @@ Public Class Form1
             Return RandomItemFrom("Venus is the only planet to spin clockwise",
                                   "Bananas are berries, but strawberries aren’t!",
                                   "The longest place name in the world is the name of a village in Wales: Llanfair­pwllgwyngyll­gogery­chwyrn­drobwll­llan­tysilio­gogo­goch. Try fitting that on a postcard!",
-                                  "Believe it or not, the unicorn is Scotland’s national animal. They’ve been associated with Scotland for centuries")
+                                  "Believe it or not, the unicorn is Scotland’s national animal. They’ve been associated with Scotland for centuries",
+                                  "Honey Never Spoils: Archaeologists have found pots of honey in ancient Egyptian tombs that are over 3,000 years old and still perfectly edible.")
         ElseIf Multicontains(UserInput, "joke/funny") Then
             Return RandomItemFrom("Sean: I’m so sorry, my dog ate my homework. \n Teacher: Your dog ate your coding assignment? \n Sean: It took him a couple bytes",
                                   "Why do programmers prefer dark mode? \n Because light attracts bugs.",
-                                  "How many programmers does it take to change a light bulb? \n None, that's a hardware problem.")
+                                  "How many programmers does it take to change a light bulb? \n None, that's a hardware problem.",
+                                  "There are 10 types of people in the world: Those who understand binary, and those who don’t.")
         ElseIf Multicontains(UserInput, "variable/var", "declare/make/create/declaring/making/creating") Then
             Return RandomItemFrom("In VB.NET, you can declare a variable using the Dim keyword. For example, the following declares the variable myNumber as type Integer:: Dim myNumber As Integer")
         ElseIf Multicontains(UserInput, "button", "click/tap/event/clicking/tapping/press/pressing") Then
