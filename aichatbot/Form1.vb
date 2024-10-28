@@ -2,7 +2,6 @@
 Imports System.Speech.Synthesis
 
 Public Class Form1
-    Dim Index As Integer = 0
     Dim SoundFlag As Boolean = True
     Private Shared rand As New Random
 
@@ -73,41 +72,62 @@ Public Class Form1
         synth.SpeakAsync("I'm going to go now")
     End Sub
     Private Sub SendMessage(UserSent As Boolean, Message As String)
+        Dim NewPanel As New FlowLayoutPanel
         Dim NewMessage As New Label
-        Index = Index + 1
-        NewMessage.Name = "chat" & Index
 
-        NewMessage.Text = Message
+        Dim CodeMessage As Label
+
+        Dim Message2 = Split(Message, ":: ")
+
+        NewMessage.Text = Message2(0)
         NewMessage.Font = New Font("Segoe UI", 8)
 
-        NewMessage.Padding = New Padding(NewMessage.Padding.Left + 3, NewMessage.Padding.Top + 8, NewMessage.Padding.Right + 3, NewMessage.Padding.Bottom + 8)
+        NewPanel.Padding = New Padding(NewPanel.Padding.Left, NewPanel.Padding.Top + 5, NewPanel.Padding.Right + 3, NewPanel.Padding.Bottom + 5)
 
         If UserSent Then
+            NewPanel.BackColor = ColorTranslator.FromHtml("#BCD2EE")
             NewMessage.BackColor = ColorTranslator.FromHtml("#BCD2EE")
 
-            Dim LeftMargin = FlowLayoutPanel1.Width - NewMessage.PreferredWidth - NewMessage.Margin.Right - 10 - NewMessage.Padding.Left - NewMessage.Padding.Right
+            Dim LeftMargin = FlowLayoutPanel1.Width - NewMessage.PreferredWidth - NewPanel.Margin.Right - 20 - NewPanel.Padding.Left - NewPanel.Padding.Right
             If LeftMargin > 0 Then
-                NewMessage.Margin = New Padding(LeftMargin, NewMessage.Margin.Top + 5, 0, NewMessage.Margin.Bottom + 5)
+                NewPanel.Margin = New Padding(LeftMargin, NewPanel.Margin.Top + 5, 0, NewPanel.Margin.Bottom + 5)
             Else
-                NewMessage.Margin = New Padding(FlowLayoutPanel1.Width - 300 - NewMessage.Margin.Right - 10 - NewMessage.Padding.Left - NewMessage.Padding.Right, NewMessage.Margin.Top + 5, 0, NewMessage.Margin.Bottom + 5)
+                NewPanel.Margin = New Padding(FlowLayoutPanel1.Width - 300 - NewPanel.Margin.Right - 20 - NewPanel.Padding.Left - NewPanel.Padding.Right, NewPanel.Margin.Top + 5, 0, NewPanel.Margin.Bottom + 5)
             End If
 
-            NewMessage.Anchor = AnchorStyles.Right
+            NewPanel.Anchor = AnchorStyles.Right
             NewMessage.TextAlign = ContentAlignment.MiddleRight
-            NewMessage.Dock = DockStyle.Right
+            NewPanel.Dock = DockStyle.Right
         Else
+            NewPanel.BackColor = ColorTranslator.FromHtml("#fa52bf")
             NewMessage.BackColor = ColorTranslator.FromHtml("#fa52bf")
-            NewMessage.Margin = New Padding(NewMessage.Margin.Left + 5, NewMessage.Margin.Top + 5, NewMessage.Margin.Right, NewMessage.Margin.Bottom + 5)
+            NewPanel.Margin = New Padding(NewPanel.Margin.Left + 5, NewPanel.Margin.Top + 5, NewPanel.Margin.Right, NewPanel.Margin.Bottom + 5)
         End If
 
         NewMessage.AutoSize = True
-        NewMessage.MaximumSize = New Size(300, 0)
+        NewPanel.AutoSize = True
+        NewPanel.MaximumSize = New Size(300, 0)
 
-        FlowLayoutPanel1.Controls.Add(NewMessage)
-        FlowLayoutPanel1.Controls.SetChildIndex(NewMessage, 0)
-        FlowLayoutPanel1.ScrollControlIntoView(NewMessage)
+        NewPanel.Controls.Add(NewMessage)
 
-        Dim Message2 = Split(Message, ":")
+        If UserSent = False And Message.Contains(":: ") Then
+            NewMessage.Text &= ":" & vbNewLine & vbNewLine
+
+            CodeMessage = New Label
+
+            CodeMessage.Text = Message2(1)
+            CodeMessage.BackColor = ColorTranslator.FromHtml("#c8b3ee")
+            CodeMessage.ForeColor = ColorTranslator.FromHtml("#591057")
+            CodeMessage.AutoSize = True
+            CodeMessage.Padding = New Padding(CodeMessage.Padding.Left + 5, CodeMessage.Padding.Top + 5, NewPanel.PreferredSize.Width - CodeMessage.PreferredWidth - CodeMessage.Padding.Left - 5, CodeMessage.Padding.Bottom + 5)
+
+            NewPanel.Controls.Add(CodeMessage)
+        End If
+
+        FlowLayoutPanel1.Controls.Add(NewPanel)
+        FlowLayoutPanel1.Controls.SetChildIndex(NewPanel, 0)
+        FlowLayoutPanel1.ScrollControlIntoView(NewPanel)
+
         If UserSent = False Then
             synth.SpeakAsyncCancelAll()
             synth.SpeakAsync(Message2(0))
@@ -167,11 +187,11 @@ Public Class Form1
                                   "Why do programmers prefer dark mode? \n Because light attracts bugs.",
                                   "How many programmers does it take to change a light bulb? \n None, that's a hardware problem.")
         ElseIf Multicontains(UserInput, "variable/var", "declare/make/create") Then
-            Return RandomItemFrom("In VB.NET, you can declare a variable using the Dim keyword. For example, the following declares the variable myNumber as type Integer: \n Dim myNumber As Integer")
+            Return RandomItemFrom("In VB.NET, you can declare a variable using the Dim keyword. For example, the following declares the variable myNumber as type Integer:: Dim myNumber As Integer")
         ElseIf Multicontains(UserInput, "button", "click/tap/event") Then
-            Return RandomItemFrom("You can handle a button click event by double clicking the button in the designer. This will automatically add an event handler that looks something like this: \n Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click \n MessageBox.Show(""Button Clicked!"")")
+            Return RandomItemFrom("You can handle a button click event by double clicking the button in the designer. This will automatically add an event handler that looks something like this:: Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click \n MessageBox.Show(""Button Clicked!"")")
         ElseIf Multicontains(UserInput, "string", "contains/has/contain", "check/whether/if/when") Then
-            Return RandomItemFrom("You can use the Contains method: \n Dim str As String = ""Hello World"" \n If str.Contains(""World"") Then \n     Console.WriteLine(""String found!"") \n End If")
+            Return RandomItemFrom("You can use the Contains method:: Dim str As String = ""Hello World"" \n If str.Contains(""World"") Then \n     Console.WriteLine(""String found!"") \n End If")
         ElseIf Multicontains(UserInput, "hello/hi/hallo/hey/good day/afternoon/morning/evening/bonjour/greet/howdy/long time/hiya/greeting/whats up/what's up") Then
             Return RandomItemFrom("Hello! How can I assist you today?",
                                   "What's up?",
@@ -183,9 +203,9 @@ Public Class Form1
         ElseIf Multicontains(UserInput, "meaning of life/meaning of the universe/meaning of it all/meaning of everything") Then
             Return RandomItemFrom("I am an AI chatbot made to answer questions about VB.net, not the meaning of life. However, I hope you find some meaning in your coding journey!")
         ElseIf Multicontains(UserInput, "while", "loop") Then
-            Return RandomItemFrom("A While loop can be used to repeat code while something is true. For example, the following code repeats while i is lower or equal to 10: \n While i <= 10 \n     Console.WriteLine(i) \n     i += 1 \n End While")
+            Return RandomItemFrom("A While loop can be used to repeat code while something is true. For example, the following code repeats while i is lower or equal to 10: While i <= 10 \n     Console.WriteLine(i) \n     i += 1 \n End While")
         ElseIf Multicontains(UserInput, "loop") Then
-            Return RandomItemFrom("A basic For loop can be used to repeat code Like so: \n For i As Integer = 1 To 10 \n     Console.WriteLine(i)Next")
+            Return RandomItemFrom("A basic For loop can be used to repeat code Like so: For i As Integer = 1 To 10 \n     Console.WriteLine(i)Next")
         End If
 
         Return RandomItemFrom("Sorry, I'm not sure I understand.",
