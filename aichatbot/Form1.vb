@@ -178,7 +178,7 @@ Public Class Form1
             Return RandomItemFrom("In VB.NET, you can declare a variable using the Dim keyword. For example: \n Dim myNumber As Integer")
         ElseIf Multicontains(UserInput, "button", "click/tap/event") Then
             Return RandomItemFrom("You can handle a button click event by double clicking the button in the designer. This will automatically add an event handler that looks something like this: \n Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click \n MessageBox.Show(""Button Clicked!"")")
-        ElseIf Multicontains(UserInput, "string", "contains,has,contain", "check,whether,if,when") Then
+        ElseIf Multicontains(UserInput, "string", "contains/has/contain", "check/whether/if/when") Then
             Return RandomItemFrom("You can use the Contains method: \n Dim str As String = ""Hello World"" \n If str.Contains(""World"") Then \n     Console.WriteLine(""String found!"") \n End If")
         ElseIf Multicontains(UserInput, "hello/hi/hallo/hey/good day/afternoon/morning/evening/bonjour/greet/howdy/long time/hiya/greeting/whats up/what's up") Then
             Return RandomItemFrom("Hello! How can I assist you today?",
