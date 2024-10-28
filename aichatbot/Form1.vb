@@ -107,9 +107,10 @@ Public Class Form1
         FlowLayoutPanel1.Controls.SetChildIndex(NewMessage, 0)
         FlowLayoutPanel1.ScrollControlIntoView(NewMessage)
 
+        Dim Message2 = Split(Message, ":")
         If UserSent = False Then
             synth.SpeakAsyncCancelAll()
-            synth.SpeakAsync(Message)
+            synth.SpeakAsync(Message2(0))
         End If
     End Sub
 
@@ -165,8 +166,8 @@ Public Class Form1
             Return RandomItemFrom("Sean: I’m so sorry, my dog ate my homework. \n Teacher: Your dog ate your coding assignment? \n Sean: It took him a couple bytes",
                                   "Why do programmers prefer dark mode? \n Because light attracts bugs.",
                                   "How many programmers does it take to change a light bulb? \n None, that's a hardware problem.")
-        ElseIf Multicontains(UserInput, "variable", "declare/make/create") Then
-            Return RandomItemFrom("In VB.NET, you can declare a variable using the Dim keyword. For example: \n Dim myNumber As Integer")
+        ElseIf Multicontains(UserInput, "variable/var", "declare/make/create") Then
+            Return RandomItemFrom("In VB.NET, you can declare a variable using the Dim keyword. For example, the following declares the variable myNumber as type Integer: \n Dim myNumber As Integer")
         ElseIf Multicontains(UserInput, "button", "click/tap/event") Then
             Return RandomItemFrom("You can handle a button click event by double clicking the button in the designer. This will automatically add an event handler that looks something like this: \n Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click \n MessageBox.Show(""Button Clicked!"")")
         ElseIf Multicontains(UserInput, "string", "contains/has/contain", "check/whether/if/when") Then
@@ -182,9 +183,9 @@ Public Class Form1
         ElseIf Multicontains(UserInput, "meaning of life/meaning of the universe/meaning of it all/meaning of everything") Then
             Return RandomItemFrom("I am an AI chatbot made to answer questions about VB.net, not the meaning of life. However, I hope you find some meaning in your coding journey!")
         ElseIf Multicontains(UserInput, "while", "loop") Then
-            Return RandomItemFrom("A While loop can be created like this: \n     For i As Integer = 1 To 10 \n     Console.WriteLine(i) \n Next")
+            Return RandomItemFrom("A While loop can be used to repeat code while something is true. For example, the following code repeats while i is lower or equal to 10: \n While i <= 10 \n     Console.WriteLine(i) \n     i += 1 \n End While")
         ElseIf Multicontains(UserInput, "loop") Then
-            Return RandomItemFrom("A For loop can be created like this: \n     For i As Integer = 1 To 10 \n     Console.WriteLine(i) \n Next")
+            Return RandomItemFrom("A basic For loop can be used to repeat code Like so: \n For i As Integer = 1 To 10 \n     Console.WriteLine(i)Next")
         End If
 
         Return RandomItemFrom("Sorry, I'm not sure I understand.",
