@@ -34,6 +34,15 @@
         Next
     End Sub
 
+    Private Sub transblackpanel_Paint(sender As Object, e As PaintEventArgs) Handles transblackpanel.Paint
+        ' Set up a semi-transparent black color
+        Dim translucentBlack As Color = Color.FromArgb(128, 0, 0, 0) ' 128 = 50% opacity
+        Using brush As New SolidBrush(translucentBlack)
+            ' Fill the panel with the translucent color
+            e.Graphics.FillRectangle(brush, transblackpanel.ClientRectangle)
+        End Using
+    End Sub
+
     Protected Overrides ReadOnly Property CreateParams() As CreateParams
         Get
             Dim cp As CreateParams = MyBase.CreateParams
