@@ -156,7 +156,7 @@ Partial Class FormHome
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.MaximizeBox = False
         Me.Name = "FormHome"
-        Me.Text = "A"
+        Me.Text = "VB.net AI: Home"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

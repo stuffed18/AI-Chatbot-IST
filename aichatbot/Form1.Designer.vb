@@ -259,7 +259,7 @@ Partial Class Form1
         Me.MaximizeBox = False
         Me.Name = "Form1"
         Me.ShowIcon = False
-        Me.Text = "Form1"
+        Me.Text = "VB.net AI: Chat with Codex"
         Me.FlowLayoutPanel1.ResumeLayout(False)
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()

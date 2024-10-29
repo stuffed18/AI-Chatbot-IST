@@ -126,7 +126,7 @@ Partial Class FormQB
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.MaximizeBox = False
         Me.Name = "FormQB"
-        Me.Text = "FormQB"
+        Me.Text = "VB.net AI: Question Bank"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.transblackpanel.ResumeLayout(False)

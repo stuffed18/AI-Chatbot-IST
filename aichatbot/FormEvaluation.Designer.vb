@@ -159,7 +159,7 @@ Partial Class FormEvaluation
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
         Me.Name = "FormEvaluation"
-        Me.Text = "FormEvaluation"
+        Me.Text = "VB.net AI: Evaluation"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
