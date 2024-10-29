@@ -271,5 +271,32 @@
   <ItemGroup>
     <None Include="Resources\volume-xmark-solid.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buttonclick.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\labelproperties.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addingcontrols.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buttonclick-ezgif.com-cut.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2024-10-29 at 12-41-00 IST WORK and stuff like that - Google Docs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\formbackcolor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\messageboxdemo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\formbackgroundimg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fixedsingle.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

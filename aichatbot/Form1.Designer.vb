@@ -24,6 +24,7 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
+        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.ButtonHome = New System.Windows.Forms.Button()
@@ -31,15 +32,19 @@ Partial Class Form1
         Me.Button1 = New System.Windows.Forms.Button()
         Me.FlowSuggestions = New System.Windows.Forms.FlowLayoutPanel()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.ComboBoxVoice = New System.Windows.Forms.ComboBox()
         Me.ButtonSound = New System.Windows.Forms.Button()
         Me.ButtonClearChat = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.FlowLayoutPanel1.SuspendLayout()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -47,6 +52,7 @@ Partial Class Form1
         '
         Me.FlowLayoutPanel1.AutoScroll = True
         Me.FlowLayoutPanel1.BackColor = System.Drawing.Color.Transparent
+        Me.FlowLayoutPanel1.Controls.Add(Me.PictureBox5)
         Me.FlowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.BottomUp
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(172, -6)
         Me.FlowLayoutPanel1.Margin = New System.Windows.Forms.Padding(2)
@@ -54,6 +60,14 @@ Partial Class Form1
         Me.FlowLayoutPanel1.Size = New System.Drawing.Size(580, 395)
         Me.FlowLayoutPanel1.TabIndex = 0
         Me.FlowLayoutPanel1.WrapContents = False
+        '
+        'PictureBox5
+        '
+        Me.PictureBox5.Location = New System.Drawing.Point(3, 342)
+        Me.PictureBox5.Name = "PictureBox5"
+        Me.PictureBox5.Size = New System.Drawing.Size(100, 50)
+        Me.PictureBox5.TabIndex = 0
+        Me.PictureBox5.TabStop = False
         '
         'PictureBox2
         '
@@ -101,7 +115,7 @@ Partial Class Form1
         Me.TextBoxInput.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBoxInput.Multiline = True
         Me.TextBoxInput.Name = "TextBoxInput"
-        Me.TextBoxInput.Size = New System.Drawing.Size(448, 21)
+        Me.TextBoxInput.Size = New System.Drawing.Size(448, 28)
         Me.TextBoxInput.TabIndex = 2
         '
         'Button1
@@ -134,6 +148,7 @@ Partial Class Form1
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(96, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.PictureBox4)
         Me.Panel1.Controls.Add(Me.ComboBoxVoice)
         Me.Panel1.Controls.Add(Me.ButtonSound)
         Me.Panel1.Controls.Add(Me.ButtonClearChat)
@@ -146,6 +161,15 @@ Partial Class Form1
         Me.Panel1.Size = New System.Drawing.Size(173, 544)
         Me.Panel1.TabIndex = 8
         '
+        'PictureBox4
+        '
+        Me.PictureBox4.Image = Global.aichatbot.My.Resources.Resources.fixedsingle
+        Me.PictureBox4.Location = New System.Drawing.Point(58, 219)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(100, 50)
+        Me.PictureBox4.TabIndex = 13
+        Me.PictureBox4.TabStop = False
+        '
         'ComboBoxVoice
         '
         Me.ComboBoxVoice.BackColor = System.Drawing.Color.White
@@ -156,7 +180,7 @@ Partial Class Form1
         Me.ComboBoxVoice.Items.AddRange(New Object() {"Male Voice", "Female Voice"})
         Me.ComboBoxVoice.Location = New System.Drawing.Point(65, 446)
         Me.ComboBoxVoice.Name = "ComboBoxVoice"
-        Me.ComboBoxVoice.Size = New System.Drawing.Size(87, 21)
+        Me.ComboBoxVoice.Size = New System.Drawing.Size(90, 21)
         Me.ComboBoxVoice.TabIndex = 12
         '
         'ButtonSound
@@ -183,20 +207,20 @@ Partial Class Form1
         Me.ButtonClearChat.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonClearChat.Font = New System.Drawing.Font("Segoe UI", 10.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonClearChat.ForeColor = System.Drawing.Color.White
-        Me.ButtonClearChat.Location = New System.Drawing.Point(26, 483)
+        Me.ButtonClearChat.Location = New System.Drawing.Point(24, 479)
         Me.ButtonClearChat.Name = "ButtonClearChat"
-        Me.ButtonClearChat.Size = New System.Drawing.Size(25, 25)
+        Me.ButtonClearChat.Size = New System.Drawing.Size(30, 30)
         Me.ButtonClearChat.TabIndex = 9
         Me.ButtonClearChat.UseVisualStyleBackColor = True
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 13.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle))
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Bold)
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(238, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(53, 482)
+        Me.Label2.Location = New System.Drawing.Point(59, 482)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(99, 25)
+        Me.Label2.Size = New System.Drawing.Size(102, 25)
         Me.Label2.TabIndex = 10
         Me.Label2.Text = "Clear Chat"
         '
@@ -243,10 +267,13 @@ Partial Class Form1
         Me.Name = "Form1"
         Me.ShowIcon = False
         Me.Text = "Form1"
+        Me.FlowLayoutPanel1.ResumeLayout(False)
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -267,4 +294,6 @@ Partial Class Form1
     Friend WithEvents Label2 As Label
     Friend WithEvents ButtonSound As Button
     Friend WithEvents ComboBoxVoice As ComboBox
+    Friend WithEvents PictureBox4 As PictureBox
+    Friend WithEvents PictureBox5 As PictureBox
 End Class

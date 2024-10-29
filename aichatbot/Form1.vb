@@ -64,7 +64,27 @@ Public Class Form1
     End Sub
     Private Sub SendImage()
         Dim NewImage As New PictureBox
-        NewImage.Image = My.Resources.im_going_to_go_now__1_1
+        If SendingImg = 0 Then
+            NewImage.Image = My.Resources.buttonclick_ezgif_com_cut
+        ElseIf SendingImg = 1 Then
+            NewImage.Image = My.Resources.labelproperties
+        ElseIf SendingImg = 2 Then
+            NewImage.Image = My.Resources.addingcontrols
+        ElseIf SendingImg = 3 Then
+            NewImage.Image = My.Resources.Screenshot_2024_10_29_at_12_41_00_IST_WORK_and_stuff_like_that___Google_Docs
+        ElseIf SendingImg = 4 Then
+        ElseIf SendingImg = 5 Then
+            NewImage.Image = My.Resources.formbackcolor
+        ElseIf SendingImg = 6 Then
+            NewImage.Image = My.Resources.messageboxdemo
+        ElseIf SendingImg = 7 Then
+            NewImage.Image = My.Resources.formbackgroundimg
+        ElseIf SendingImg = 8 Then
+            NewImage.Image = My.Resources.fixedsingle
+
+        Else
+            NewImage.Image = My.Resources.im_going_to_go_now__1_1
+        End If
         NewImage.SizeMode = PictureBoxSizeMode.StretchImage
         NewImage.Size = New System.Drawing.Size(200, 200)
 
