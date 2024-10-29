@@ -49,6 +49,7 @@ Public Class Form1
 
 
     Private Sub AddSuggestion(str)
+        FlowSuggestions.SuspendLayout()
         Dim Suggestion As New Button
         Suggestion.Text = str
         Suggestion.AutoSize = True
@@ -56,6 +57,7 @@ Public Class Form1
         Suggestion.Font = New Font("Segoe UI", 8)
         AddHandler Suggestion.Click, AddressOf SuggestionClick
         FlowSuggestions.Controls.Add(Suggestion)
+        FlowSuggestions.ResumeLayout()
     End Sub
 
     Private Sub SuggestionClick(sender As Object, e As EventArgs)
@@ -82,6 +84,7 @@ Public Class Form1
         End If
     End Sub
     Private Sub SendImage()
+        FlowLayoutPanel1.SuspendLayout()
         Dim NewImage As New PictureBox
         If SendingImg = 0 Then
             NewImage.Image = My.Resources.buttonclick_ezgif_com_cut
@@ -111,9 +114,12 @@ Public Class Form1
 
         FlowLayoutPanel1.Controls.Add(NewImage)
         FlowLayoutPanel1.Controls.SetChildIndex(NewImage, 0)
+        FlowLayoutPanel1.ResumeLayout()
         FlowLayoutPanel1.ScrollControlIntoView(NewImage)
     End Sub
     Private Sub SendMessage(UserSent As Boolean, Message As String)
+        FlowLayoutPanel1.SuspendLayout()
+
         Dim NewPanel As New FlowLayoutPanel
         Dim NewMessage As New Label
 
@@ -164,13 +170,15 @@ Public Class Form1
             NewPanel.Controls.Add(CodeMessage)
         End If
 
+
         FlowLayoutPanel1.Controls.Add(NewPanel)
         FlowLayoutPanel1.Controls.SetChildIndex(NewPanel, 0)
-        FlowLayoutPanel1.ScrollControlIntoView(NewPanel)
 
         If UserSent = False Then
             synth.SpeakAsyncCancelAll()
             If Goodbye Then
+                FlowLayoutPanel1.ResumeLayout()
+                FlowLayoutPanel1.ScrollControlIntoView(NewPanel)
                 synth.Speak(Message2(0))
                 FlowLayoutPanel1.Controls.Clear()
                 Goodbye = False
@@ -184,6 +192,9 @@ Public Class Form1
                 synth.SpeakAsync(Message2(0))
             End If
         End If
+
+        FlowLayoutPanel1.ResumeLayout()
+        FlowLayoutPanel1.ScrollControlIntoView(NewPanel)
     End Sub
 
 
