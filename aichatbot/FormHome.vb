@@ -45,4 +45,9 @@
         FormQB.Show()
         Me.Hide()
     End Sub
+
+    Private Sub ButtonEval_Click(sender As Object, e As EventArgs) Handles ButtonEval.Click
+        FormEvaluation.Show()
+        Me.Hide()
+    End Sub
 End Class

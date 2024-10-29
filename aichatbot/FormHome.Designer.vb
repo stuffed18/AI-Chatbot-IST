@@ -152,7 +152,9 @@ Partial Class FormHome
         Me.Controls.Add(Me.ButtonQB)
         Me.Controls.Add(Me.Button1)
         Me.DoubleBuffered = True
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.MaximizeBox = False
         Me.Name = "FormHome"
         Me.Text = "A"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()

@@ -122,7 +122,9 @@ Partial Class FormQB
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.transblackpanel)
         Me.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.MaximizeBox = False
         Me.Name = "FormQB"
         Me.Text = "FormQB"
         Me.Panel1.ResumeLayout(False)
