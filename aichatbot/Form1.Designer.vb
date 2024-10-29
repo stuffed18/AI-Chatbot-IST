@@ -22,6 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
@@ -38,6 +39,7 @@ Partial Class Form1
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.FlowLayoutPanel1.SuspendLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -233,6 +235,9 @@ Partial Class Form1
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Chat with"
         '
+        'Timer1
+        '
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -282,4 +287,5 @@ Partial Class Form1
     Friend WithEvents ButtonSound As Button
     Friend WithEvents ComboBoxVoice As ComboBox
     Friend WithEvents PictureBox5 As PictureBox
+    Friend WithEvents Timer1 As Timer
 End Class
