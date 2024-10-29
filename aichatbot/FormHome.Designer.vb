@@ -29,6 +29,9 @@ Partial Class FormHome
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.ButtonExit = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -40,7 +43,7 @@ Partial Class FormHome
         Me.Button1.Location = New System.Drawing.Point(295, 273)
         Me.Button1.Margin = New System.Windows.Forms.Padding(2)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(142, 141)
+        Me.Button1.Size = New System.Drawing.Size(142, 142)
         Me.Button1.TabIndex = 1
         Me.Button1.UseVisualStyleBackColor = True
         '
@@ -49,10 +52,10 @@ Partial Class FormHome
         Me.ButtonQB.BackgroundImage = Global.aichatbot.My.Resources.Resources.Untitled_design_15_1
         Me.ButtonQB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.ButtonQB.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
-        Me.ButtonQB.Location = New System.Drawing.Point(148, 283)
+        Me.ButtonQB.Location = New System.Drawing.Point(145, 283)
         Me.ButtonQB.Margin = New System.Windows.Forms.Padding(2)
         Me.ButtonQB.Name = "ButtonQB"
-        Me.ButtonQB.Size = New System.Drawing.Size(127, 126)
+        Me.ButtonQB.Size = New System.Drawing.Size(127, 127)
         Me.ButtonQB.TabIndex = 2
         Me.ButtonQB.UseVisualStyleBackColor = True
         '
@@ -61,10 +64,10 @@ Partial Class FormHome
         Me.ButtonEval.BackgroundImage = Global.aichatbot.My.Resources.Resources.Untitled_design_14_
         Me.ButtonEval.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ButtonEval.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
-        Me.ButtonEval.Location = New System.Drawing.Point(459, 283)
+        Me.ButtonEval.Location = New System.Drawing.Point(460, 283)
         Me.ButtonEval.Margin = New System.Windows.Forms.Padding(2)
         Me.ButtonEval.Name = "ButtonEval"
-        Me.ButtonEval.Size = New System.Drawing.Size(127, 126)
+        Me.ButtonEval.Size = New System.Drawing.Size(127, 127)
         Me.ButtonEval.TabIndex = 3
         Me.ButtonEval.UseVisualStyleBackColor = True
         '
@@ -96,6 +99,42 @@ Partial Class FormHome
         Me.ButtonExit.TabIndex = 6
         Me.ButtonExit.UseVisualStyleBackColor = False
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label1.Location = New System.Drawing.Point(140, 411)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(134, 25)
+        Me.Label1.TabIndex = 7
+        Me.Label1.Text = "Question Bank"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label2.Location = New System.Drawing.Point(284, 413)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(165, 30)
+        Me.Label2.TabIndex = 8
+        Me.Label2.Text = "Chat with Codex"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label3.Location = New System.Drawing.Point(475, 411)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(100, 25)
+        Me.Label3.TabIndex = 9
+        Me.Label3.Text = "Evaluation"
+        '
         'FormHome
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -104,6 +143,9 @@ Partial Class FormHome
         Me.BackgroundImage = Global.aichatbot.My.Resources.Resources.img_2024_10_26_09_14_18_cleanup
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(738, 578)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.ButtonExit)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.ButtonEval)
@@ -115,6 +157,7 @@ Partial Class FormHome
         Me.Text = "A"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents Button1 As Button
@@ -123,4 +166,7 @@ Partial Class FormHome
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Timer1 As Timer
     Friend WithEvents ButtonExit As Button
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label3 As Label
 End Class

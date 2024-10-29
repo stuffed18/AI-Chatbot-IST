@@ -32,7 +32,6 @@ Partial Class Form1
         Me.Button1 = New System.Windows.Forms.Button()
         Me.FlowSuggestions = New System.Windows.Forms.FlowLayoutPanel()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.ComboBoxVoice = New System.Windows.Forms.ComboBox()
         Me.ButtonSound = New System.Windows.Forms.Button()
         Me.ButtonClearChat = New System.Windows.Forms.Button()
@@ -44,7 +43,6 @@ Partial Class Form1
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -148,7 +146,6 @@ Partial Class Form1
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(96, Byte), Integer))
-        Me.Panel1.Controls.Add(Me.PictureBox4)
         Me.Panel1.Controls.Add(Me.ComboBoxVoice)
         Me.Panel1.Controls.Add(Me.ButtonSound)
         Me.Panel1.Controls.Add(Me.ButtonClearChat)
@@ -160,15 +157,6 @@ Partial Class Form1
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(173, 544)
         Me.Panel1.TabIndex = 8
-        '
-        'PictureBox4
-        '
-        Me.PictureBox4.Image = Global.aichatbot.My.Resources.Resources.fixedsingle
-        Me.PictureBox4.Location = New System.Drawing.Point(58, 219)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(100, 50)
-        Me.PictureBox4.TabIndex = 13
-        Me.PictureBox4.TabStop = False
         '
         'ComboBoxVoice
         '
@@ -273,7 +261,6 @@ Partial Class Form1
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -294,6 +281,5 @@ Partial Class Form1
     Friend WithEvents Label2 As Label
     Friend WithEvents ButtonSound As Button
     Friend WithEvents ComboBoxVoice As ComboBox
-    Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents PictureBox5 As PictureBox
 End Class

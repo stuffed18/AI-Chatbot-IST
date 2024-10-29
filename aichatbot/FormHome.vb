@@ -10,8 +10,11 @@
         Ticks = 0
         PictureBox1.Location = New System.Drawing.Point(PictureBox1.Location.X, PictureBox1.Location.Y - 200)
         Button1.Location = New System.Drawing.Point(Button1.Location.X, Button1.Location.Y + 400)
+        Label2.Location = New System.Drawing.Point(Label2.Location.X, Label2.Location.Y + 400)
         ButtonQB.Location = New System.Drawing.Point(ButtonQB.Location.X - 400, ButtonQB.Location.Y)
+        Label1.Location = New System.Drawing.Point(Label1.Location.X - 400, Label1.Location.Y)
         ButtonEval.Location = New System.Drawing.Point(ButtonEval.Location.X + 400, ButtonEval.Location.Y)
+        Label3.Location = New System.Drawing.Point(Label3.Location.X + 400, Label3.Location.Y)
         Timer1.Start()
 
 
@@ -21,8 +24,11 @@
         Ticks += 1
         PictureBox1.Location = New System.Drawing.Point(PictureBox1.Location.X, PictureBox1.Location.Y + (2 - (Ticks / 100)))
         Button1.Location = New System.Drawing.Point(Button1.Location.X, Button1.Location.Y - (4 - (Ticks / 50)))
+        Label2.Location = New System.Drawing.Point(Label2.Location.X, Label2.Location.Y - (4 - (Ticks / 50)))
         ButtonQB.Location = New System.Drawing.Point(ButtonQB.Location.X + (4 - (Ticks / 50)), ButtonQB.Location.Y)
+        Label1.Location = New System.Drawing.Point(Label1.Location.X + (4 - (Ticks / 50)), Label1.Location.Y)
         ButtonEval.Location = New System.Drawing.Point(ButtonEval.Location.X - (4 - (Ticks / 50)), ButtonEval.Location.Y)
+        Label3.Location = New System.Drawing.Point(Label3.Location.X - (4 - (Ticks / 50)), Label3.Location.Y)
         If Ticks = 200 Then
             Timer1.Stop()
         End If
