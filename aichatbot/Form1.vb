@@ -50,7 +50,7 @@ Public Class Form1
             'Dim Answers = {"No.", "Sure buddy", "blud thought he was doing something With that", "Ok who asked", "Not my problem", "No one cares bro", "No thanks, I'm good.", "Maybe if you use 1% of your brain for once", "Beep boop im an AI chatbot ready at your service. Jsut kidding i dont care go die"}
             SendMessage(False, DecideChatbotAnswer(Input))
 
-            If rand.Next(10, 15) = 11 Then
+            If SendingImg > -1 Then
                 SendImage()
             End If
 
@@ -85,7 +85,7 @@ Public Class Form1
         Else
             NewImage.Image = My.Resources.im_going_to_go_now__1_1
         End If
-        NewImage.SizeMode = PictureBoxSizeMode.StretchImage
+        NewImage.SizeMode = PictureBoxSizeMode.Zoom
         NewImage.Size = New System.Drawing.Size(200, 200)
 
         NewImage.Margin = New Padding(NewImage.Margin.Left + 5, NewImage.Margin.Top + 5, NewImage.Margin.Right, NewImage.Margin.Bottom + 5)
@@ -93,7 +93,6 @@ Public Class Form1
         FlowLayoutPanel1.Controls.Add(NewImage)
         FlowLayoutPanel1.Controls.SetChildIndex(NewImage, 0)
         FlowLayoutPanel1.ScrollControlIntoView(NewImage)
-        synth.SpeakAsync("I'm going to go now")
     End Sub
     Private Sub SendMessage(UserSent As Boolean, Message As String)
         Dim NewPanel As New FlowLayoutPanel
@@ -236,7 +235,7 @@ Public Class Form1
         ElseIf Multicontains(UserInput, "label", "text", "change/set/modify/tweak/alter") Then
             SendingImg = 1 'Label text in properties window
             Return RandomItemFrom("You can change the text a Label displays by setting it in the Properties window under the property ‘Text’. To change the text by code, you can set the property like so:: Label1.Text = ""New Text""")
-        ElseIf UserInput.Contains("string to integer") Or UserInput.Contains("string to int") Or UserInput.Contains("str to int") Or UserInput.Contains("str to integer") Or UserInput.Contains("int from str") Or UserInput.Contains("integer from str") Or UserInput.Contains("integer from string") Or UserInput.Contains("int from string") Then
+        ElseIf ContainsStringToInt(UserInput) Then
             Return RandomItemFrom("You can use the CInt Function:: Dim num As Integer = CInt(""123"")")
         ElseIf Multicontains(UserInput, "add/create/put/make/access/drag/adding/creating/putting/making/dragging", "ui/button/label/panel/textbox/control/element") Then
             SendingImg = 2 'Toolbox window
@@ -321,8 +320,45 @@ Public Class Form1
         Text = Text.Replace("/", "")
         Text = Text.Replace("\", "")
         For Each Word In Split(Text, " ")
-            If Word = CWord Then
+            If Word = CWord Or Word = CWord & "s" Or Word = CWord & "es" Then
                 Return True
+            End If
+        Next
+        Return False
+    End Function
+
+    Private Function ContainsStringToInt(Text_ As String)
+        Dim Text As String = Text_.Replace("?", "")
+        Text = Text.Replace(".", "")
+        Text = Text.Replace(",", "")
+        Text = Text.Replace("!", "")
+        Text = Text.Replace("(", "")
+        Text = Text.Replace(")", "")
+        Text = Text.Replace("*", "")
+        Text = Text.Replace("&", "")
+        Text = Text.Replace("/", "")
+        Text = Text.Replace("\", "")
+
+        Dim Words = Split(Text, " ")
+        Dim Expecting As String = ""
+        For Each Word In Words
+            If Expecting = "to" And Word = "to" Then
+                Expecting = "int"
+            ElseIf Expecting = "from" And Word = "from" Then
+                Expecting = "str"
+            End If
+            If Word = "int" Or Word = "integer" Or Word = "num" Or Word = "number" Or Word = "ints" Or Word = "integers" Or Word = "nums" Or Word = "numbers" Then
+                If Expecting = "" Then
+                    Expecting = "from"
+                ElseIf Expecting = "int" Then
+                    Return True
+                End If
+            ElseIf Word = "str" Or Word = "string" Or Word = "text" Or Word = "texts" Or Word = "strings" Then
+                If Expecting = "" Then
+                    Expecting = "to"
+                ElseIf Expecting = "str" Then
+                    Return True
+                End If
             End If
         Next
         Return False
