@@ -210,6 +210,7 @@ Public Class Form1
         sender.BackgroundImage = My.Resources.Resources.homewhite
         FormHome.Show()
         sender.BackgroundImage = My.Resources.Resources.home_button_logo
+        synth.SpeakAsyncCancelAll()
         Me.Hide()
     End Sub
 
